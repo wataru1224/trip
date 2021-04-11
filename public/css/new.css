@@ -7,6 +7,10 @@
           box-sizing: border-box;
 }
 
+ul li {
+  list-style: none;
+}
+
 button {
   background-color: transparent;
   border: none;
@@ -21,10 +25,10 @@ button {
 
 html {
   font-size: 16px;
+  background-color: #faf8f4;
 }
 
 body {
-  background: #e7e4e4;
   font-family: "M PLUS Rounded 1c";
 }
 
@@ -35,10 +39,10 @@ a {
 /*header*/
 header {
   width: 100%;
-  background: #1360a8;
+  background: #fff;
   text-align: center;
   padding: 1rem 0;
-  color: #f5f5f5;
+  color: #000;
   position: relative;
 }
 
@@ -53,6 +57,40 @@ header {
 /*main*/
 main {
   padding-left: 2rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+main form {
+  margin: 5rem;
+  border: 1px solid #000;
+  background-color: #fafafa;
+}
+
+.item {
+  padding: 1rem;
+  margin: 2rem;
+  background-color: #fafafa;
+  color: #000;
+}
+
+.main-item {
+  margin-bottom: 1.5rem;
+}
+
+.sub-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.sub-item textarea {
+  width: 90%;
 }
 
 .task-items {
@@ -72,7 +110,7 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #f5f5f5;
+  background: #fff;
   width: 40%;
   margin-top: 1rem;
   padding: 0.7rem 0;
@@ -94,9 +132,9 @@ main {
 .btn {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  color: #f5f5f5;
+  color: #fff;
   font-weight: bold;
-  background: #28290a;
+  background: #000;
 }
 
 .btn-delete,
@@ -106,8 +144,7 @@ main {
 
 /*new*/
 .edit-new {
-  width: 30%;
-  margin: 1rem 0 0 1rem;
+  width: 80%;
   padding: 0.5rem 1rem;
 }
 
@@ -117,4 +154,4 @@ td {
   text-align-last: left;
   padding: 0.5rem 1rem;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=new.css.map */

@@ -16,7 +16,16 @@ use App\Http\Controllers\HomeController;
 //Route::get('/パス', [コントローラー名::class, 'アクション名']);
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-Route::get('/hello', [HomeController::class, 'top']);
+Route::get('/hello', [HomeController::class, 'home']);
+
+Route::get('/hello/{id}', [HomeController::class, 'show'])->where('id', '[0-9]+');
+
+Route::get('/hello/new', [HomeController::class, 'new']);
+
+//new.blade.phpのformからの情報を受け取る
+///hello/createに Post リクエストが来たら
+//HomeController の create アクションが作動
+Route::post('/hello/create', [HomeController::class, 'create']);

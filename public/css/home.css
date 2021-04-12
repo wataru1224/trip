@@ -209,12 +209,7 @@ a {
   width: 100%;
 }
 
-.task-text {
-  width: 70%;
-  word-break: break-all;
-}
-
-.task {
+.task-items .task {
   border-radius: 0.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -229,6 +224,12 @@ a {
   height: 4rem;
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
           box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
+}
+
+.task-text {
+  width: 70%;
+  word-break: break-all;
+  display: block;
 }
 
 .task-btn {

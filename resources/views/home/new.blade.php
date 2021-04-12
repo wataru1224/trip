@@ -9,7 +9,8 @@
       <label for="">タイトル:</label>           
       <input type="text" name="title" value=""  placeholder="例：京都旅行"  class="edit-new">
     </div>
-   
+    
+   <input type="hidden" name="trip-id" value="{{$id}}">
         
     <h2>旅行の内容</h2>
     <div class="item">
@@ -18,7 +19,7 @@
         <input type="datetime-local" name="date" value="" class="space">
 
         <label for="">行先：</label>
-        <input type="text" name="" value="destination" placeholder="例：金閣寺" class="space">
+        <input type="text" name="destination" value="" placeholder="例：金閣寺" class="space">
       </div>
 
       <div class="sub-item">

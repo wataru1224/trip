@@ -18,15 +18,25 @@ class HomeController extends Controller
         return view('home.show', compact("itinerary"));
     }
 
-    public function new()
+    public function new($id)
     {
-        return view('home.new');
+        return view('home.new', compact("id"));
     }
 
     public function create(Request $request)
     {
         $title = $request->input("title");
-        \App\Models\Itinerary::create(["title" => $title]);
+        $date = $request->input("date");
+        $destination = $request->input("destination");
+        $contents = $request->input("contents");
+        $tripId = $request->input("trip-id");
+        \App\Models\Itinerary::create([
+            "title" => $title,
+            "date" => $date,
+            "destination" => $destination,
+            "contents" => $contents,
+            "trip-id" => $tripId
+            ]);
         return redirect("/hello");
     }
 }

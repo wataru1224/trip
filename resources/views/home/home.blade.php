@@ -106,7 +106,7 @@
             </section> -->
 
             <section>
-                <div class="task-items">
+                <div class="task-items ">
                     @foreach ($itineraries as $itinerary)
 
                     <div class="task">
@@ -116,6 +116,7 @@
                             </a>
                         </div>
                     </div>
+                    <br>
                     @endforeach
                 </div>
             </section>

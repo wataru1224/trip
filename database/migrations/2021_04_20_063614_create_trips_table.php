@@ -18,7 +18,7 @@ class CreateTripsTable extends Migration
             $table->timestamps();
             $table->string("title");
             $table->string("contents");
-            $table->blob("image");
+            $table->binary("image");
             $table->string("itinerary");
             $table->integer("trip-id");
         });

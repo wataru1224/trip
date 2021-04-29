@@ -52,7 +52,7 @@ header {
 
 /*main*/
 main {
-  padding-left: 2rem;
+  width: 100%;
 }
 
 .task-items {
@@ -108,13 +108,6 @@ main {
 .edit-new {
   width: 30%;
   margin: 1rem 0 0 1rem;
-  padding: 0.5rem 1rem;
-}
-
-/*詳細*/
-th,
-td {
-  text-align-last: left;
   padding: 0.5rem 1rem;
 }
 /*# sourceMappingURL=style.css.map */

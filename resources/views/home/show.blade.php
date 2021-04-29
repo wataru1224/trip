@@ -1,42 +1,33 @@
-<header><h1>詳細ページ</h1></header>
+@include('home.header')
+
 <main>
+    <article>
+    <div class="plan">
+        <div class="main-plan">
+            <h2>{{ $itinerary['title'] }}</h2>
+            <p>{{ $itinerary['date'] }}~</p>
+            <div class="plan-date">
+                <p>作成日時:{{ $itinerary['created_at'] }}</p>
+                <p>更新日時:{{ $itinerary['updated_at'] }}</p>
+            </div>
+        </div>
 
-<table>
-<tr>
-    <th>ID</th>
-    <td>{{ $itinerary['id'] }}</td>
-</tr>
-
-<tr>
-<th>タイトル</th>
-    <td>{{ $itinerary['title'] }}</td>
-</tr>
-
-<th>日程</th>
-    <td>{{ $itinerary['date'] }}</td>
-</tr>
-
-<th>行先</th>
-    <td>{{ $itinerary['destination'] }}</td>
-</tr>
-
-<th>メモ</th>
-    <td>{{ $itinerary['contents'] }}</td>
-</tr>
-
-<tr>
-<th>作成日時</th>
-    <td>{{ $itinerary['created_at'] }}</td>
-</tr>
-
-<tr>
-<th>更新日時</th>
-    <td>{{ $itinerary['updated_at'] }}</td>
-</tr>
-</table>
-<br>
-<br>
-<a href="/hello" class="btn">ホームへ</a>
+        <div class="sub-plan">
+            <h2 class="plan-title">プラン</h2>
+            <br>
+            <p class="plan-date">{{ $itinerary['date'] }}</p>
+            <div class="contents-wrapper">  
+                <div class="plan-wrapper">
+                    <p>＊時間のみ表示（8:00）</p>
+                    <p>*日付を表示 （2021/4/28）</p>
+                </div>
+                <div class="content-wrapper">
+                    <p class="wrapper-text">{{ $itinerary['destination'] }}</p>
+                    <p>{{ $itinerary['contents'] }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
 </main>
-<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('css/style.scss') }}">
+@include('home.footer')

@@ -1,9 +1,9 @@
 <header>
 <h1>編集フォーム</h1></header>
 <main>
-<form action="{{ url('/hello/update/'.$post->id)}}" method="POST">
+<form action="{{ url('/hello/update/'.$itinerary->id)}}" method="POST">
   {{ csrf_field() }}
-  <input type="text" name="title" value="{{ $post->title }}" class="edit-new">
+  <input type="text" name="title" value="{{ $itinerary->title }}" class="edit-new">
   <button type="submit" name="add" class="btn">
    変更
   </button>

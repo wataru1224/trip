@@ -10,9 +10,8 @@ class Trip extends Model
     //use HasFactory;
     protected $fillable = [
         'title',
-        'contents',
-        'user',
         'image',
-        'itinerary',
+        'user_id',
+        'is_public',
     ];
 }

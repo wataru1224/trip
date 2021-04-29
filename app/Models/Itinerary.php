@@ -9,10 +9,10 @@ class Itinerary extends Model
 {
     //use HasFactory;
     protected $fillable = [
-        'title',
         'date',
         'destination',
         'contents',
         'trip-id',
+        'image',
     ];
 }

@@ -4,11 +4,88 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-ul li {
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: Shuei MaruGo B,"游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",  "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  line-height: 1.7;
+  font-family: adobe-arabic, sans-serif;
+  font-style: normal;
+}
+
+img {
+  max-width: 100%;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, .h7 {
+  line-height: 1.4;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 0.95rem;
+  line-height: 30px;
+}
+
+li {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* nav */
+.nav-header {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.nav-header .globalnav-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: bold;
+  width: 100%;
+  color: #000;
+  margin: 0.5rem;
+  padding-bottom: 3rem;
+}
+
+.nav-header .globalnav-wrap h1 {
+  font-size: 2rem;
+}
+
+.log {
+  margin: 1rem;
+  color: #107ef4;
 }
 
 button {
@@ -23,39 +100,20 @@ button {
   font-size: 1rem;
 }
 
-html {
-  font-size: 16px;
-  background-color: #faf8f4;
+/*main*/
+input {
+  padding: .8rem 1rem .6rem;
+  font-style: 100%;
 }
 
-body {
-  font-family: "M PLUS Rounded 1c";
-}
-
-a {
-  text-decoration: none;
-}
-
-/*header*/
-header {
+main {
   width: 100%;
-  background: #fff;
   text-align: center;
-  padding: 1rem 0;
   color: #000;
   position: relative;
 }
 
-.btn-new {
-  position: absolute;
-  top: 50%;
-  right: 2%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-/*main*/
-main {
+main article {
   padding-left: 2rem;
   text-align: center;
   margin-left: auto;
@@ -63,21 +121,25 @@ main {
   width: 70%;
 }
 
-main form {
-  margin: 5rem;
-  border: 1px solid #000;
-  background-color: #fafafa;
+main article .main-title {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  display: inline-block;
+  border-bottom: solid 1px #107ef4;
 }
 
 .item {
-  padding: 1rem;
-  margin: 2rem;
-  background-color: #fafafa;
+  background-color: #eef2f3;
   color: #000;
+  padding: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #000;
 }
 
 .main-item {
   margin-bottom: 1.5rem;
+  text-align: left;
 }
 
 .sub-item {
@@ -91,6 +153,8 @@ main form {
 
 .sub-item textarea {
   width: 90%;
+  padding: .8rem 1rem .6rem;
+  font-size: 100%;
 }
 
 .task-items {
@@ -125,8 +189,12 @@ main form {
 }
 
 .btn-text {
-  color: #555555;
+  color: #eef2f3;
   padding: 0.2rem;
+}
+
+.foom-btn {
+  text-align: center;
 }
 
 .btn {
@@ -134,7 +202,13 @@ main form {
   border-radius: 0.5rem;
   color: #fff;
   font-weight: bold;
-  background: #000;
+  background: #107ef4;
+  border: 1px solid #000;
+}
+
+.add-btn {
+  margin: 0 auto;
+  margin: 2rem;
 }
 
 .btn-delete,
@@ -148,10 +222,103 @@ main form {
   padding: 0.5rem 1rem;
 }
 
+/* footer */
+footer {
+  width: 100%;
+  background-color: #000;
+}
+
+footer .main-footer {
+  width: 80%;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+}
+
+footer .main-footer a {
+  font-size: 2.5rem;
+}
+
 /*詳細*/
-th,
-td {
-  text-align-last: left;
-  padding: 0.5rem 1rem;
+.plan {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.plan .main-plan {
+  color: #fff;
+  border: solid 1px #fff;
+  padding: 3rem;
+  background-image: -webkit-gradient(linear, left bottom, right top, color-stop(10%, #8a72fc), color-stop(65%, #7badff), color-stop(125%, #19fff9));
+  background-image: linear-gradient(to right top, #8a72fc 10%, #7badff 65%, #19fff9 125%);
+}
+
+.plan .main-plan h2 {
+  display: inline-block;
+  padding: 10px 30px 15px 30px;
+  font-size: 2rem;
+  border: solid 2px #fff;
+  margin-bottom: 2rem;
+}
+
+.plan .main-plan .plan-date {
+  text-align: right;
+}
+
+.plan .sub-plan {
+  margin-top: 5rem;
+}
+
+.plan .sub-plan .plan-title {
+  display: inline-block;
+  font-size: 2rem;
+  border-bottom: solid 1px #107ef4;
+  margin-bottom: 2rem;
+}
+
+.plan .sub-plan .plan-date {
+  font-size: 2rem;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  border-left: solid 5px #107ef4;
+}
+
+.plan .sub-plan .contents-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+}
+
+.plan .sub-plan .contents-wrapper .plan-wrapper p {
+  text-align: left;
+}
+
+.plan .sub-plan .contents-wrapper .content-wrapper {
+  color: #fff;
+  border: solid 1px #fff;
+  padding: 2rem;
+  width: 70%;
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+  background-color: #107ef4;
+  border-radius: 10px;
+}
+
+.plan .sub-plan .contents-wrapper .content-wrapper .wrapper-text {
+  border-bottom: solid 1px #fff;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.plan .sub-plan .contents-wrapper .content-wrapper p {
+  font-size: 1.2em;
+  padding-bottom: 0.5rem;
 }
 /*# sourceMappingURL=new.css.map */

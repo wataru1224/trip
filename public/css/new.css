@@ -121,11 +121,22 @@ main article {
   width: 70%;
 }
 
-main article .main-title {
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-  display: inline-block;
-  border-bottom: solid 1px #107ef4;
+main article form .title-form {
+  background-color: #eef2f3;
+  color: #000;
+  padding: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #000;
+  text-align: left;
+}
+
+main article form .title-form .title-item {
+  margin-bottom: 1.5rem;
+}
+
+main article form .title-form .image-item {
+  width: 100%;
 }
 
 .item {
@@ -137,12 +148,19 @@ main article .main-title {
   border: 1px solid #000;
 }
 
-.main-item {
+.item .main-item {
   margin-bottom: 1.5rem;
   text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.sub-item {
+.item .main-item .main-items {
+  margin-right: 1rem;
+}
+
+.item .sub-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,10 +169,15 @@ main article .main-title {
           align-items: flex-start;
 }
 
-.sub-item textarea {
+.item .sub-item textarea {
   width: 90%;
   padding: .8rem 1rem .6rem;
   font-size: 100%;
+}
+
+.item .image {
+  text-align: left;
+  margin-top: 1rem;
 }
 
 .task-items {
@@ -193,22 +216,35 @@ main article .main-title {
   padding: 0.2rem;
 }
 
-.foom-btn {
+.form-btn {
   text-align: center;
 }
 
-.btn {
+.form-btn .side-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.form-btn .left-btn {
+  display: block;
+  text-align: left;
+}
+
+.form-btn .left-btn .add-btn {
+  margin: 0 auto;
+}
+
+.form-btn .btn {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   color: #fff;
   font-weight: bold;
   background: #107ef4;
   border: 1px solid #000;
-}
-
-.add-btn {
-  margin: 0 auto;
-  margin: 2rem;
+  margin: 1.5rem 0;
 }
 
 .btn-delete,
@@ -320,5 +356,78 @@ footer .main-footer a {
 .plan .sub-plan .contents-wrapper .content-wrapper p {
   font-size: 1.2em;
   padding-bottom: 0.5rem;
+}
+
+@media (max-width: 599px) {
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+  body {
+    font-family: Shuei MaruGo B,"游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",  "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    line-height: 1.7;
+    font-family: adobe-arabic, sans-serif;
+    font-style: normal;
+  }
+  img {
+    max-width: 100%;
+  }
+  .h1, .h2, .h3, .h4, .h5, .h6, .h7 {
+    line-height: 1.4;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 0.95rem;
+    line-height: 30px;
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main article {
+    width: 100%;
+    padding: 0;
+  }
+  main article form {
+    width: 90%;
+    margin: 0 auto;
+  }
+  main article form .title-form {
+    padding: 1.8rem;
+  }
+  .item {
+    padding: 1.8rem;
+  }
+  .item .main-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .item .main-item .main-items {
+    margin-bottom: 1.2rem;
+  }
 }
 /*# sourceMappingURL=new.css.map */

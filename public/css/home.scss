@@ -18,8 +18,11 @@ img {
   max-width: 100%;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 2.3rem;
   padding-bottom: 2.5rem;
+}
+h3 {
+  font-size: 1.8rem;
 }
 p {
   font-size: 0.95rem;
@@ -50,29 +53,40 @@ a {
   position: absolute;
   z-index: 100;
   color: #fff;
+
+  transition: 0.5s;
   nav {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     h1 {
       font-size: 2rem;
-    }
-    .Toggle {
-      display: none;
+      margin: 1.5rem;
     }
   }
 }
+
+//スクロールした時のnav
+.scroll-nav {
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  color: #000;
+  a {
+    color: #000;
+  }
+}
+
+
 .menu {
   width: 100%;
   font-size:0.9em;
   background-color: transparent;
-  margin:0 10px;
   -webkit-transform: translateX(0);
   transform: translateX(0);
   ul {
-    height: 70px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -81,6 +95,7 @@ a {
 }
 .menu ul li a {
   padding: 0 1em;
+  margin-right: 2rem;
   border-bottom: none;
   color:#fff;
 }
@@ -91,10 +106,8 @@ a {
 /* main */
 #slider {
   width: 100%;
-  height: 100vh;
 }
 .header-title {
-  font-size: 2rem;
   margin: 0 auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -113,7 +126,6 @@ a {
     position: absolute;
     bottom: 130px;
     left: 8%;
-    font-size: 2rem;
   }
 }
 .header-title::before {
@@ -151,6 +163,8 @@ a {
       .design-title {
         display: flex;
         margin-bottom: 0.5rem;
+        font-weight: bold;
+        line-height: 1.3rem;
         p {
           font-size: 2rem;
           position: relative;
@@ -170,9 +184,7 @@ a {
         h3 {
           width: 80%;
           padding-top: 0.5rem;
-          font-weight: bold;
-          line-height: 1.5rem;
-          padding-left: 1.5rem;
+          margin: 0 auto;
         }
       }
     }
@@ -221,28 +233,30 @@ a {
 .sub-section {
   text-align: center;
   padding: 5rem;
+  width: 100%;
   .task-items {
-    width: 100%;
+    width: 80%;
     .task {
-    border-radius: 0.25rem;
-    display: flex;
-    justify-content: space-between;
-    background: #eef2f3;
-    width: 40%;
-    padding: 0.7rem 0;
-    height: 4rem;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
-    margin-right: auto;
-    margin-left: auto;
+      border-radius: 0.25rem;
+      display: flex;
+      justify-content: space-between;
+      background: #eef2f3;
+      width: 40%;
+      padding: 0.7rem 0;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
+      margin-right: auto;
+      margin-left: auto;
       .task-text {
-      width: 100%;
-      word-break: break-all;
-      display: block;
-      text-align: center;
+        width: 100%;
+        word-break: break-all;
+        text-align: center;
         .btn-text {
-        color: #555555;
-        padding: 0.2rem;
-        display: block;
+          color: #555555;
+          display: block;
+          img {
+            width: 80%;
+            text-align: center;  
+          }
         }
       }
     }
@@ -291,31 +305,153 @@ footer {
 }
 
 
+//タブレット
+@media (max-width: 1024px) {
 
-@media screen and (max-width: 599px) {
+}
+
+
+//スマートフォン
+@media (max-width: 599px) {
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+  body {
+    font-family:  "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "メイリオ", sans-serif;
+    line-height: 1.7;
+    font-style: normal;
+  }
+  img {
+    max-width: 100%;
+  }
+  h2 {
+    font-size: 1.8rem;
+    padding-bottom: 2.5rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+  p {
+    font-size: 0.85rem;
+    line-height: 30px;
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+
+main {
+  
+  article {
+    .header-title {
+      height: 390px;
+      .header-letter {
+        position: absolute;
+        bottom: 5px;
+        left: 5%;
+      }
+    }
+    .main-section{
+      width: 100%;
+      padding: 0;
+      .main-contents-wrapper {
+        width: 90%;
+        .main-content-wrapper {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+
+    .design-section {
+      h2 {
+        padding: 0;
+      }
+      .reverse {
+       display: flex;   
+       flex-direction: column-reverse;
+      }
+      .design-contents {
+        width: 90%;
+        display: flex;
+        flex-direction: column-reverse;
+        .design-text-box {
+          width: 100%;
+          padding: 1rem 0;
+          .design-title {
+            p {
+              font-size: 1.5rem;
+            }
+            h3 {
+              padding-top: 0.8rem;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
 nav {
  width: 100%;
  height: 70px;
  position: relative;
- background: #F6F6F6;
+ display: block!important;
+//  background: #F6F6F6;
  .drawer {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   position: relative;
+  position:fixed;
+  top: 0;
+  left: 0;
   height: 70px;
   padding: 0 1em;
   }
 }
 
 /*ナビゲーション部分*/
+.menu {
+  ul {
+    height: 100vh;
+    li {
+      width: 100%;
+    }
+  }
+}
+
 .menu ul li a {
   display:block;
   font-weight:bold;
   padding: 2em;
   border-bottom: 1px dotted #CCC;
-  color:#333;
   text-decoration:none;
 }
 .menu ul li a:hover{
@@ -325,10 +461,11 @@ nav {
  
 .menu{
   text-align:center;
-  background-color:rgba(255,255,255,0.5);
-  transition: 0.5s ease;/*滑らかに表示*/
-  -webkit-transform: translateX(-105%);
-  transform: translateX(-105%);/*左に隠しておく*/
+  // background-color:rgba(255,255,255,0.5);
+  transition: 0.55s ease;/*滑らかに表示*/
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);/*左に隠しておく*/
+  background-color: rgba(46, 46, 46, 0.9);
 }
  
 /*OPEN時の動き*/
@@ -345,14 +482,15 @@ nav {
   height: 42px;
   cursor: pointer;
   z-index: 3;
-  right:15px;
+  right:30px;
+  color:#FFF;
 }
  
 .Toggle span {
   display: block;
   position: absolute;
   width: 50px;
-  border-bottom: solid 4px #333;
+  border-bottom: solid 4px #FFF;
   -webkit-transition: .35s ease-in-out;	/*変化の速度を指定*/
   -moz-transition: .35s ease-in-out;		/*変化の速度を指定*/
   transition: .35s ease-in-out;			/*変化の速度を指定*/

@@ -4,8 +4,9 @@
     <article>
     <div class="plan">
         <div class="main-plan">
-            <h2>{{ $itinerary['title'] }}</h2>
+            <h2>{{ $trip['title'] }}</h2>
             <p>{{ $itinerary['date'] }}~</p>
+            <img src="{{$trip->image}}" ale="画像" />
             <div class="plan-date">
                 <p>作成日時:{{ $itinerary['created_at'] }}</p>
                 <p>更新日時:{{ $itinerary['updated_at'] }}</p>

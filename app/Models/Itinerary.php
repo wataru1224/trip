@@ -12,7 +12,7 @@ class Itinerary extends Model
         'date',
         'destination',
         'contents',
-        'trip-id',
+        'trip_id',
         'image',
     ];
 }

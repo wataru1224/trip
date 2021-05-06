@@ -23,20 +23,24 @@ class HomeController extends Controller
         // trip内容
         // formのnameで指定した情報を受け取る
         $title = $request->input("title");
+        // dd($request->file("image"));
         $image = $request->file("image")->store('public/image');
 
         $trip = \App\Models\Trip::create([// 受け取った情報を保存する
         "title" => $title,//titleカラムに$titleを入れる
-        "image" => "https://tabisio.com/assets/img/bg/Mockup6.jpg",
+        "image" => $image,
         "user_id" => 1,
         "is_public" => false,
          ]);
 
         // Itineraryは配列で受け取られる
         $itineraries = $request->input("itinerary");
+        // dd($itineraries);
         $images = $request->file("itinerary");
+        // dd($images);
 
-        foreach ($itineraries as $itinerary) {
+        //asの後に$a=>
+        foreach ($itineraries as  $itinerary) {
             \App\Models\Itinerary::create([
             "date" => $itinerary["date"],     // 受け取った情報を保存する
             "destination" => $itinerary["destination"],

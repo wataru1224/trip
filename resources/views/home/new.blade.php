@@ -38,32 +38,10 @@
             <input type="file" name="itinerary[0][image]" size="30">
           </div>    
         </div>
-        <div class="item">
-          <div class="main-item">
-            <div class="main-items">
-              <label for="">日程：</label>     
-              <input type="datetime-local" name="itinerary[1][date]" value="" >
-            </div>
-            <div class="main-items">
-              <label for="">行先：</label>
-              <input type="text" name="itinerary[1][destination]" value="" placeholder="例：金閣寺" >
-            </div>
-          </div>
-          <div class="sub-item">
-            <label for="">メモ：</label>
-            <textarea name="itinerary[1][contents]" id="" cols="20" rows="3" placeholder="例：料金、○○ツーリスト"></textarea>
-          </div>   
-          <div class="image">
-            <label for="">サブ画像:</label> 
-            <input type="file" name="itinerary[1][image]" size="30">
-          </div>    
-        </div>     
-      </div>
       <div class="form-btn">
         <button type="button" name="to" class="btn left-btn" id="to">旅行内容を追加</button>
         <div class="side-btn">
           <button type="submit" name="add" class="btn add-btn">プランを投稿する</button>
-          <button type="submit" name="post" class="btn add-btn">プランを保存する</button>
         </div>
       </div>
     </form>

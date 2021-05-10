@@ -20,36 +20,33 @@ class HomeController extends Controller
     
     public function create(Request $request)
     {
-        // trip内容
         // formのnameで指定した情報を受け取る
         $title = $request->input("title");
-        // dd($request->file("image"));
         $image = $request->file("image")->store('public/image');
-
+        $temp_path = str_replace('public/', 'storage/', $image);
         $trip = \App\Models\Trip::create([// 受け取った情報を保存する
         "title" => $title,//titleカラムに$titleを入れる
-        "image" => $image,
+        "image" => $temp_path,
         "user_id" => 1,
         "is_public" => false,
          ]);
 
         // Itineraryは配列で受け取られる
         $itineraries = $request->input("itinerary");
-        // dd($itineraries);
         $images = $request->file("itinerary");
-        // dd($images);
 
-        //asの後に$a=>
-        foreach ($itineraries as  $itinerary) {
+        foreach ($itineraries as $index => $itinerary) {
+            $image = $request->file("itinerary[" . $index . "][image]")->store("public/image");
+            $image_path = str_replace('public/', 'storage/', $image);
             \App\Models\Itinerary::create([
             "date" => $itinerary["date"],     // 受け取った情報を保存する
             "destination" => $itinerary["destination"],
             "contents" => $itinerary["contents"],
-            "image" => "https://tabisio.com/assets/img/bg/Mockup6.jpg",
+            "image" => $image_path,
             "trip_id" => $trip->id,
         ]);
         }
-        return redirect("/hello");//  helloにデータを移動させる
+        return redirect("/hello");
     }
 
     public function trip()
@@ -61,9 +58,9 @@ class HomeController extends Controller
     // show メソッドで変数\$id を引数で受け取る
     public function show($id)
     {
-        $itinerary = \App\Models\Itinerary::find($id);
         $trip = \App\Models\Trip::find($id);
-        return view('home.show', compact("itinerary", "trip"));
+        $itineraries = \App\Models\Itinerary::where('trip_id', $trip->id)->get();
+        return view('home.show', compact("itineraries", "trip"));
     }
 
     public function new()

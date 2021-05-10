@@ -1,0 +1,79 @@
+[33mcommit d5461bb1cda10fcc8a8b8b614f16b2bb6aa153c7[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Reflog: HEAD@{0} (wataru1224 <watarue112037@yahoo.co.jp>)
+Reflog message: reset: moving to HEAD^
+Author: wataru1224 <watarue112037@yahoo.co.jp>
+Date:   Thu May 6 20:14:55 2021 +0900
+
+    form変更
+
+[33mcommit f7d203eff968c07b88b05b8df6be39c7b20ccef4[m[33m ([m[1;31morigin/main[m[33m)[m
+Reflog: HEAD@{1} (wataru1224 <watarue112037@yahoo.co.jp>)
+Reflog message: commit: Fix:ログイン修正前
+Author: wataru1224 <watarue112037@yahoo.co.jp>
+Date:   Fri May 7 07:43:30 2021 +0900
+
+    Fix:ログイン修正前
+
+[33mcommit d5461bb1cda10fcc8a8b8b614f16b2bb6aa153c7[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Reflog: HEAD@{2} (wataru1224 <watarue112037@yahoo.co.jp>)
+Reflog message: commit: form変更
+Author: wataru1224 <watarue112037@yahoo.co.jp>
+Date:   Thu May 6 20:14:55 2021 +0900
+
+    form変更
+
+[33mcommit f7e0b6ef7fbc6ed163a62778d6dd832347d3a25f[m
+Reflog: HEAD@{3} (wataru1224 <watarue112037@yahoo.co.jp>)
+Reflog message: commit: form
+Author: wataru1224 <watarue112037@yahoo.co.jp>
+Date:   Thu Apr 29 16:55:11 2021 +0900
+
+    form
+
+[33mcommit 290c7b31d4f9085add315a30c3129566373544e7[m
+Reflog: HEAD@{4} (wataru1224 <watarue112037@yahoo.co.jp>)
+Reflog message: Branch: renamed refs/heads/main to refs/heads/main
+Author: wataru1224 <watarue112037@yahoo.co.jp>
+Date:   Mon Apr 12 18:26:33 2021 +0900
+
+    second commit
+
+[33mcommit 290c7b31d4f9085add315a30c3129566373544e7[m
+Reflog: HEAD@{6} (wataru1224 <watarue112037@yahoo.co.jp>)
+Reflog message: commit: second commit
+Author: wataru1224 <watarue112037@yahoo.co.jp>
+Date:   Mon Apr 12 18:26:33 2021 +0900
+
+    second commit
+
+[33mcommit 107b9cf7ace95ab7f30b7314eb992abcda651a55[m
+Reflog: HEAD@{7} (wataru1224 <watarue112037@yahoo.co.jp>)
+Reflog message: commit: second commit
+Author: wataru1224 <watarue112037@yahoo.co.jp>
+Date:   Mon Apr 12 05:38:48 2021 +0900
+
+    second commit
+
+[33mcommit bd8c916179baed330962faae9904923e7aaae8bb[m
+Reflog: HEAD@{8} (wataru1224 <watarue112037@yahoo.co.jp>)
+Reflog message: Branch: renamed refs/heads/main to refs/heads/main
+Author: wataru1224 <watarue112037@yahoo.co.jp>
+Date:   Fri Apr 9 17:52:07 2021 +0900
+
+    first commit
+
+[33mcommit bd8c916179baed330962faae9904923e7aaae8bb[m
+Reflog: HEAD@{10} (wataru1224 <watarue112037@yahoo.co.jp>)
+Reflog message: Branch: renamed refs/heads/master to refs/heads/main
+Author: wataru1224 <watarue112037@yahoo.co.jp>
+Date:   Fri Apr 9 17:52:07 2021 +0900
+
+    first commit
+
+[33mcommit bd8c916179baed330962faae9904923e7aaae8bb[m
+Reflog: HEAD@{12} (wataru1224 <watarue112037@yahoo.co.jp>)
+Reflog message: commit (initial): first commit
+Author: wataru1224 <watarue112037@yahoo.co.jp>
+Date:   Fri Apr 9 17:52:07 2021 +0900
+
+    first commit

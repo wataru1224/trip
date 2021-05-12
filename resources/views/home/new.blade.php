@@ -22,8 +22,8 @@
           <div class="main-item">
             <div class="main-items">
               <label for="">日程：</label>     
-              <input type="date" name="datetime-local">
-              <input type="time" name="time-local">
+              <input type="date" name="itinerary[0][date]">
+              <input type="time" name="itinerary[0][time]">
             </div>
             <div class="main-items">
               <label for="">行先：</label>
@@ -62,7 +62,7 @@
               <div class="main-items">
                 <label for="">日程：</label>     
                 <input type="date" name="itinerary[${item_count}][date]">
-                <input type="time" name="itinerary[${item_count}][date]">
+                <input type="time" name="itinerary[${item_count}][time]">
               </div>
               <div class="main-items">
                 <label for="">行先：</label>

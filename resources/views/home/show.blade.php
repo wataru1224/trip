@@ -20,8 +20,8 @@
                 <p class="plan-date">{{ $itinerary['date'] }}</p>
                 <div class="contents-wrapper">  
                     <div class="plan-wrapper">
-                        <p>＊時間のみ表示（8:00）</p>
-                        <p>*日付を表示 （2021/4/28）</p>
+                        <p>{{ $itinerary['time'] }}</p>
+                        <p>{{ $itinerary['date'] }}</p>
                     </div>
                     <div class="content-wrapper">
                         <p class="wrapper-text">{{ $itinerary['destination'] }}</p>

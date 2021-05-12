@@ -84,6 +84,7 @@ a {
 .nav-header nav h1 {
   font-size: 2rem;
   margin: 1.5rem;
+  margin-left: 3rem;
 }
 
 .scroll-nav {
@@ -121,7 +122,7 @@ a {
 
 .menu ul li a {
   padding: 0 1em;
-  margin-right: 2rem;
+  margin-right: 3rem;
   border-bottom: none;
   color: #fff;
 }
@@ -152,7 +153,7 @@ a {
   z-index: 0;
 }
 
-.header-title .header-letter {
+.header-title h2 {
   position: absolute;
   bottom: 130px;
   left: 8%;
@@ -368,116 +369,12 @@ footer .main-footer a {
 }
 
 @media (max-width: 599px) {
-  * {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  html {
-    scroll-behavior: smooth;
-    font-size: 16px;
-  }
-  body {
-    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "メイリオ", sans-serif;
-    line-height: 1.7;
-    font-style: normal;
-  }
-  img {
-    max-width: 100%;
-  }
-  h2 {
-    font-size: 1.8rem;
-    padding-bottom: 2.5rem;
-  }
-  h3 {
-    font-size: 1.3rem;
-  }
-  p {
-    font-size: 0.85rem;
-    line-height: 30px;
-  }
-  li {
-    list-style: none;
-  }
-  a {
-    text-decoration: none;
-    color: #fff;
-  }
-  .flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-  main article .header-title {
-    height: 390px;
-  }
-  main article .header-title .header-letter {
-    position: absolute;
-    bottom: 5px;
-    left: 5%;
-  }
-  main article .main-section {
-    width: 100%;
-    padding: 0;
-  }
-  main article .main-section .main-contents-wrapper {
-    width: 90%;
-  }
-  main article .main-section .main-contents-wrapper .main-content-wrapper {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  main article .design-section h2 {
-    padding: 0;
-  }
-  main article .design-section .reverse {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-  main article .design-section .design-contents {
-    width: 90%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-  main article .design-section .design-contents .design-text-box {
-    width: 100%;
-    padding: 1rem 0;
-  }
-  main article .design-section .design-contents .design-text-box .design-title p {
-    font-size: 1.5rem;
-  }
-  main article .design-section .design-contents .design-text-box .design-title h3 {
-    padding-top: 0.8rem;
-    margin: 0 auto;
-  }
   nav {
     width: 100%;
     height: 70px;
     position: relative;
     display: block !important;
+    background: #F6F6F6;
   }
   nav .drawer {
     display: -webkit-box;
@@ -574,11 +471,64 @@ footer .main-footer a {
     transform: rotate(-45deg);
   }
   /* 2番目と3番目のspanを45度に */
-  .Toggle.active span:nth-child(2),
-  .Toggle.active span:nth-child(3) {
+  .Toggle.active span:nth-child(2), .Toggle.active span:nth-child(3) {
     top: 18px;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
+  }
+  main article .header-title {
+    height: 390px;
+  }
+  main article .header-title h2 {
+    position: absolute;
+    bottom: 5px;
+    left: 5%;
+  }
+  main article .reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  main article .main-section {
+    width: 100%;
+    padding: 0;
+  }
+  main article .main-section .main-contents-wrapper {
+    width: 90%;
+  }
+  main article .main-section .main-contents-wrapper .main-content-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main article .design-section h2 {
+    padding: 0;
+  }
+  main article .design-section .design-contents {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  main article .design-section .design-contents .design-text-box {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  main article .design-section .design-contents .design-text-box .design-title p {
+    font-size: 1.5rem;
+  }
+  main article .design-section .design-contents .design-text-box .design-title h3 {
+    padding-top: 0.8rem;
+    margin: 0 auto;
   }
 }
 /*# sourceMappingURL=home.css.map */

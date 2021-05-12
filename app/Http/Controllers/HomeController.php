@@ -36,17 +36,19 @@ class HomeController extends Controller
         $images = $request->file("itinerary");
 
         foreach ($itineraries as $index => $itinerary) {
-            $image = $request->file("itinerary[" . $index . "][image]")->store("public/image");
-            $image_path = str_replace('public/', 'storage/', $image);
-            \App\Models\Itinerary::create([
-            "date" => $itinerary["date"],     // 受け取った情報を保存する
-            "destination" => $itinerary["destination"],
-            "contents" => $itinerary["contents"],
-            "image" => $image_path,
-            "trip_id" => $trip->id,
-        ]);
+            // $image = $request->file("itinerary[" . $index . "][image]")->store("public/image");
+            var_dump("itinerary[" . $index . "][image]");
+            //     $image_path = str_replace('public/', 'storage/', $image);
+        //     \App\Models\Itinerary::create([
+        //     "date" => $itinerary["date"],     // 受け取った情報を保存する
+        //     "time" => $itinerary["time"],
+        //     "destination" => $itinerary["destination"],
+        //     "contents" => $itinerary["contents"],
+        //     "image" => $image_path,
+        //     "trip_id" => $trip->id,
+        // ]);
         }
-        return redirect("/hello");
+        // return redirect("/hello");
     }
 
     public function trip()

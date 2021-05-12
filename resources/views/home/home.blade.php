@@ -37,7 +37,7 @@
     <main>
         <article>
             <header id="slider" class="header-title">
-                <h2 class="header-letter">プランを作る <br>
+                <h2>プランを作る <br>
                     プランを投稿する。</h2>
             </header>
 
@@ -59,9 +59,9 @@
                 </div>
             </section>
 
-           
             <section class="design-section">
                 <h2>Instavelの3つの特徴</h2>
+                
                 <div class="design-contents">
                     <div class="design-img">
                         <img src="{{ asset('img/future.jpg')}}" alt="">             

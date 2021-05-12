@@ -22,7 +22,8 @@
           <div class="main-item">
             <div class="main-items">
               <label for="">日程：</label>     
-              <input type="datetime-local" name="itinerary[0][date]" value="" >
+              <input type="date" name="datetime-local">
+              <input type="time" name="time-local">
             </div>
             <div class="main-items">
               <label for="">行先：</label>
@@ -38,11 +39,10 @@
             <input type="file" name="itinerary[0][image]" size="30">
           </div>    
         </div>
+      </div>
       <div class="form-btn">
         <button type="button" name="to" class="btn left-btn" id="to">旅行内容を追加</button>
-        <div class="side-btn">
-          <button type="submit" name="add" class="btn add-btn">プランを投稿する</button>
-        </div>
+        <button type="submit" name="add" class="btn add-btn">プランを投稿する</button>
       </div>
     </form>
   </article>
@@ -61,7 +61,8 @@
             <div class="main-item">
               <div class="main-items">
                 <label for="">日程：</label>     
-                <input type="datetime-local" name="itinerary[${item_count}][date]" value="">
+                <input type="date" name="itinerary[${item_count}][date]">
+                <input type="time" name="itinerary[${item_count}][date]">
               </div>
               <div class="main-items">
                 <label for="">行先：</label>

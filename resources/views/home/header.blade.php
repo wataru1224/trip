@@ -8,29 +8,37 @@
     <title>Instavel</title>
 </head>
 <body>
-  <header class="nav-header">
-   <nav class="globalnav-wrap"> 
+    <header class="nav-header">
         <h1>Instavel</h1>
-        <div class="nav-button-wrap">
-            <div class="nav-button">
+        <div id="nav-toggle">
+            <div>
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-        </div>  
-        <ul class="globalnav">
-            <a href="/hello" class="log">ホーム</a>
-            <a href="/hello/new" class="log">プラン作成</a>
-            <a href="/hello/self" class="log">マイページ</a>                      
-            <a href="/hello/pass" class="log">ログイン</a>                 
-        </ul>             
-    </nav>        
-</header>  
+            </div>  
+        </div>
+        <div id="global-nav">
+            <nav>
+                <ul class="nav-wrap">
+                    <li><a href="/hello" class="log">ホーム</a></li>
+                    <li><a href="/hello/new" class="log">プラン作成</a></li>
+                    <li><a href="/hello/self" class="log">マイページ</a></li>
+                    <li><a href="/hello/pass" class="log">ログイン</a></li>              
+                </ul>                    
+            </nav>
+        </div>
+    </header>  
 </body>
 
-    <script>
-        
-    </script>
+<script>
+    (function($) {
+        $(function () {
+            $('#nav-toggle').on('click', function() {
+                $('body').toggleClass('open');
+            });
+        });
+    })(jQuery);
+</script>
 
 <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/new.css') }}">

@@ -24,10 +24,11 @@ class HomeController extends Controller
         $title = $request->input("title");
         $image = $request->file("image")->store('public/image');
         $temp_path = str_replace('public/', 'storage/', $image);
+        $user = auth()->user();
         $trip = \App\Models\Trip::create([// 受け取った情報を保存する
         "title" => $title,//titleカラムに$titleを入れる
         "image" => $temp_path,
-        "user_id" => 1,
+        "user_id" => $user->id,
         "is_public" => false,
          ]);
 
@@ -64,6 +65,14 @@ class HomeController extends Controller
         return view('home.show', compact("itineraries", "trip"));
     }
 
+    // マイページ
+    public function self()
+    {
+        $user = auth()->user();
+        $trips = \App\Models\Trip::where('user_id', $user->id)->get();
+        return view('home.self', compact("trips"));
+    }
+
     public function new()
     {
         return view('home.new');
@@ -81,12 +90,17 @@ class HomeController extends Controller
         return view('home.pass');
     }
 
-    //簡単ログイン
-
-
-    // マイページ
-    public function self()
+    //新規ログイン
+    public function register()
     {
-        return view('home.self');
+        return view('home.register');
     }
+
+    //簡単ログイン
+    // public function pass($id)
+    // {
+    //     $trip = \App\Models\Trip::find($id);
+    //     $itineraries = \App\Models\Itinerary::where('trip_id', $trip->id)->get();
+    //     return view('home.pass', compact("itineraries", "trip"));
+    // }
 }

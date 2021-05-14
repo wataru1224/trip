@@ -5,4 +5,8 @@
 @import 'variables';
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../node_modules/tailwindcss/dist/tailwind.css';
+@import '../../node_modules/tailwindcss/components.css';
+@import '../../node_modules/tailwindcss/utilities.css';
+

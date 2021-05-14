@@ -23,6 +23,8 @@ Route::get('hello', [HomeController::class, 'home']);
 
 Route::get('/hello/{id}', [HomeController::class, 'show'])->where('id', '[0-9]+');
 
+Route::get('/hello/self/', [HomeController::class,'self']);
+
 Route::get('/hello/new/', [HomeController::class, 'new']);
 
 //new.blade.phpのformからの情報を受け取る
@@ -36,11 +38,13 @@ Route::get('/hello/pass', function () {
     return view('home.pass');
 });
 
+Route::get('/hello/register', function () {
+    return view('home.register');
+});
+
 //ログイン後ページ設定
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
 Route::get('/hello/pass', [HomeController::class,'pass']);
-
-Route::get('/hello/self', [HomeController::class,'self']);

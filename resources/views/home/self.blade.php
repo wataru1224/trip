@@ -15,9 +15,6 @@
             <br>
             @endforeach
         </div>
-
     </article>
 </main>
-
-
 @include('home.footer')

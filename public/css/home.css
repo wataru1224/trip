@@ -287,10 +287,6 @@ a {
   width: 100%;
 }
 
-.sub-section .task-items {
-  width: 80%;
-}
-
 .sub-section .task-items .task {
   border-radius: 0.25rem;
   display: -webkit-box;

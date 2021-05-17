@@ -17,22 +17,38 @@ class HomeController extends Controller
         return view('home.home', compact("itineraries", "trips"));
         //viewのhomeでitinerariesを使えるようにcompactでviewに渡す
     }
-    
+
+    // formのnameで指定した情報Requestで受け取る
     public function create(Request $request)
     {
-        // formのnameで指定した情報を受け取る
-        $title = $request->input("title");
+        $request->validate(
+            [
+            'title' => 'required',
+            'date' => 'required',
+            'time' => 'required',
+            'destination' => 'required',
+            'contents' => 'required',
+        ],
+            [
+            'title.required' => 'タイトルは必須です。',
+        ]
+        );
+
+        $title = $request->input("title");//formで指定したtitleの値を取り出す
         $image = $request->file("image")->store('public/image');
         $temp_path = str_replace('public/', 'storage/', $image);
         $user = auth()->user();
-        $trip = \App\Models\Trip::create([// 受け取った情報を保存する
+
+
+
+        // 受け取った情報をDBに保存する
+        $trip = \App\Models\Trip::create([
         "title" => $title,//titleカラムに$titleを入れる
         "image" => $temp_path,
         "user_id" => $user->id,
         "is_public" => false,
          ]);
 
-        // Itineraryは配列で受け取られる
         $itineraries = $request->input("itinerary");
         $images = $request->file("itinerary");
 
@@ -40,7 +56,7 @@ class HomeController extends Controller
             $image = $request->file("itinerary." . $index . ".image")->store("public/image");
             $image_path = str_replace('public/', 'storage/', $image);
             \App\Models\Itinerary::create([
-            "date" => $itinerary["date"],     // 受け取った情報を保存する
+            "date" => $itinerary["date"],
             "time" => $itinerary["time"],
             "destination" => $itinerary["destination"],
             "contents" => $itinerary["contents"],
@@ -48,21 +64,13 @@ class HomeController extends Controller
             "trip_id" => $trip->id,
         ]);
         }
-        return redirect("/hello");
+        return redirect("/hello"); // 一覧にリダイレクトさせる
     }
 
     public function trip()
     {
         $trips = \App\Models\Trip::all();
         return view('home.home', compact("trips"));
-    }
-
-    // show メソッドで変数\$id を引数で受け取る
-    public function show($id)
-    {
-        $trip = \App\Models\Trip::find($id);
-        $itineraries = \App\Models\Itinerary::where('trip_id', $trip->id)->get();
-        return view('home.show', compact("itineraries", "trip"));
     }
 
     // マイページ
@@ -73,16 +81,27 @@ class HomeController extends Controller
         return view('home.self', compact("trips"));
     }
 
+    // show メソッドで変数\$id を引数で受け取る
+    public function show($id)
+    {
+        $trip = \App\Models\Trip::find($id);
+        // $itineraries = \App\Models\Itinerary::where('trip_id', $trip->id)->get();
+        $itineraries = $trip->itineraries;
+        return view('home.show', compact("itineraries", "trip"));
+    }
+
+    public function edit($id)
+    {
+        $trip = \App\Models\Trip::find($id);
+        $itineraries = $trip->itineraries;
+        return view('home.edit', compact("trip", "itineraries"));
+    }
+
     public function new()
     {
         return view('home.new');
     }
 
-    public function edit($id)
-    {
-        $itinerary = \App\Models\Itinerary::find($id);
-        return view('home.edit', compact("itinerary"));
-    }
 
     // ログイン
     public function pass()
@@ -95,6 +114,14 @@ class HomeController extends Controller
     {
         return view('home.register');
     }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'title' => 'required|unique:posts',
+        ]);
+    }
+
 
     //簡単ログイン
     // public function pass($id)

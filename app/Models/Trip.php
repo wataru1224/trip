@@ -14,4 +14,9 @@ class Trip extends Model
         'user_id',
         'is_public',
     ];
+
+    public function itineraries()
+    {
+        return $this->hasMany(Itinerary::class);
+    }
 }

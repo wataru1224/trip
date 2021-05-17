@@ -1,6 +1,12 @@
 @include('home.header')
 <main>
   <article>
+    @if ($errors->any())
+      @foreach ($errors->all() as $error)
+        <p>{{ $error }}</p>
+      @endforeach
+    @endif
+    
     <form action="{{ url('/hello/create')}}" method="POST" enctype="multipart/form-data">
       {{ csrf_field() }} 
       <h2>旅行タイトル</h2> 
@@ -8,6 +14,7 @@
         <div class="title-item">
           <label for="">タイトル:</label>           
           <input type="text" name="title" value=""  placeholder="例：京都旅行"  class="edit-new">
+          
         </div>
         <div class="image-item">
           <label for="">メイン画像:</label> 

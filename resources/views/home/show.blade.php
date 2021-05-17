@@ -32,6 +32,7 @@
                 @endforeach
             </div>
         </div>
+        <a href="/hello/edit/{{ $trip->id}}" class="btn">このプランを編集する</a>
     </article>
 </main>
 @include('home.footer')

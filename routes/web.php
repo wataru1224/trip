@@ -21,7 +21,10 @@ Route::get('/', function () {
 
 Route::get('hello', [HomeController::class, 'home']);
 
-Route::get('/hello/{id}', [HomeController::class, 'show'])->where('id', '[0-9]+');
+Route::get('/hello/{id}', [HomeController::class, 'show'])
+    ->where('id', '[0-9]+')
+    ->name('hello')
+    ->middleware('auth');
 
 Route::get('/hello/self/', [HomeController::class,'self']);
 

@@ -131,7 +131,7 @@ main article {
   width: 70%;
 }
 
-main article form .title-form {
+.title-form {
   background-color: #eef2f3;
   color: #000;
   padding: 2rem;
@@ -139,11 +139,15 @@ main article form .title-form {
   text-align: left;
 }
 
-main article form .title-form .title-item {
+.title-form .title-item {
   margin-bottom: 1.5rem;
 }
 
-main article form .title-form .image-item {
+.title-form .title-item .alert {
+  color: red;
+}
+
+.title-form .image-item {
   width: 100%;
 }
 
@@ -252,7 +256,7 @@ footer .main-footer a {
   margin-top: 3rem;
 }
 
-.plan .main-plan {
+.main-plan {
   color: #fff;
   border: solid 1px #fff;
   padding: 3rem;
@@ -260,7 +264,7 @@ footer .main-footer a {
   background-image: linear-gradient(to right top, #8a72fc 10%, #7badff 65%, #19fff9 125%);
 }
 
-.plan .main-plan h2 {
+.main-plan h2 {
   display: inline-block;
   padding: 10px 35px 12px 35px;
   font-size: 2rem;
@@ -268,22 +272,22 @@ footer .main-footer a {
   margin-bottom: 2rem;
 }
 
-.plan .main-plan .plan-date {
+.main-plan .plan-date {
   text-align: right;
 }
 
-.plan .sub-plan {
+.sub-plan {
   margin-top: 5rem;
 }
 
-.plan .sub-plan .plan-title {
+.sub-plan h2 {
   display: inline-block;
   font-size: 2rem;
   border-bottom: solid 1px #107ef4;
   margin-bottom: 2rem;
 }
 
-.plan .sub-plan .plan-date {
+.sub-plan p {
   font-size: 2rem;
   padding-left: 1rem;
   margin-bottom: 2rem;
@@ -291,7 +295,7 @@ footer .main-footer a {
   border-left: solid 5px #107ef4;
 }
 
-.plan .sub-plan .contents-wrapper {
+.contents-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -301,28 +305,28 @@ footer .main-footer a {
   text-align: left;
 }
 
-.plan .sub-plan .contents-wrapper .plan-wrapper p {
+.contents-wrapper .plan-wrapper p {
   text-align: left;
 }
 
-.plan .sub-plan .contents-wrapper .content-wrapper {
+.content-wrapper {
   color: #fff;
   border: solid 1px #fff;
   padding: 2rem;
   width: 70%;
   margin-left: 3rem;
   margin-bottom: 3rem;
-  background-color: #107ef4;
+  background-color: #3986d8;
   border-radius: 10px;
 }
 
-.plan .sub-plan .contents-wrapper .content-wrapper .wrapper-text {
+.content-wrapper .wrapper-text {
   border-bottom: solid 1px #fff;
   margin-bottom: 10px;
   font-size: 1.5rem;
 }
 
-.plan .sub-plan .contents-wrapper .content-wrapper p {
+.content-wrapper p {
   font-size: 1.2em;
   padding-bottom: 0.5rem;
 }
@@ -332,13 +336,13 @@ footer .main-footer a {
   border-radius: 0.5rem;
   color: #fff;
   font-weight: bold;
-  background: #107ef4;
+  background: #3395ff;
   border: 1px solid #000;
 }
 
 article {
   text-align: center;
-  padding: 5rem;
+  padding: 2rem;
   width: 100%;
 }
 
@@ -381,52 +385,8 @@ article .task-items .task .task-text .btn-text img {
 }
 
 @media (max-width: 599px) {
-  * {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  html {
-    scroll-behavior: smooth;
-    font-size: 16px;
-  }
-  body {
-    font-family: Shuei MaruGo B,"游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",  "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-    line-height: 1.7;
-    font-family: adobe-arabic, sans-serif;
-    font-style: normal;
-  }
-  img {
-    max-width: 100%;
-  }
-  .h1, .h2, .h3, .h4, .h5, .h6, .h7 {
-    line-height: 1.4;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  p {
-    font-size: 0.95rem;
-    line-height: 30px;
-  }
-  li {
-    list-style: none;
-  }
-  a {
-    text-decoration: none;
-    color: #fff;
-  }
-  .flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+  .nav-header h1 {
+    margin: 1rem;
   }
   #nav-toggle {
     position: fixed;
@@ -590,27 +550,26 @@ article .task-items .task .task-text .btn-text img {
   }
   main article {
     width: 100%;
+    padding: 0;
   }
-  main article form {
+  form {
     width: 90%;
     margin: 0 auto;
   }
-  main article form #item-list .item {
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+  .item {
     padding: 1.5rem;
   }
-  main article form #item-list .item .main-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .main-item {
+    display: block !important;
   }
-  main article form #item-list .item .main-item .main-items {
+  .main-item .main-items {
     margin-bottom: 1.5rem;
   }
-  main article form #item-list .item .sub-item {
+  .sub-item {
     margin-top: 0;
   }
 }

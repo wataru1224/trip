@@ -9,6 +9,11 @@ use Symfony\Component\VarDumper\VarDumper;
 
 class HomeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function home()
     {
         $itineraries = \App\Models\Itinerary::all();
@@ -25,12 +30,12 @@ class HomeController extends Controller
             [
             'title' => 'required',
             'date' => 'required',
-            'time' => 'required',
             'destination' => 'required',
-            'contents' => 'required',
         ],
             [
             'title.required' => 'タイトルは必須です。',
+            'date.required' => '日程は必須です。',
+            'destination.required' => '行先は必須です。',
         ]
         );
 

@@ -62,7 +62,6 @@
 
             <section class="design-section">
                 <h2>Instavelの3つの特徴</h2>
-                
                 <div class="design-contents">
                     <div class="design-img">
                         <img src="{{ asset('img/future.jpg')}}" alt="">             

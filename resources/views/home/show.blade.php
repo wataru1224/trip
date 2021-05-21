@@ -14,10 +14,10 @@
             <img src="{{asset('/')}}{{$trip->image}}" ale="画像" />
 
             <div class="sub-plan">
-                <h2 class="plan-title">プラン</h2>
+                <h2>プラン</h2>
                 <br>
                 @foreach ($itineraries as $itinerary)
-                <p class="plan-date">{{ $itinerary['date'] }}</p>
+                <p>{{ $itinerary['date'] }}</p>
                 <div class="contents-wrapper">  
                     <div class="plan-wrapper">
                         <p>{{ $itinerary['time'] }}</p>

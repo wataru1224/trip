@@ -17,11 +17,10 @@
                 <h2>プラン</h2>
                 <br>
                 @foreach ($itineraries as $itinerary)
-                <p>{{ $itinerary['date'] }}</p>
+                <p class="border">{{ $itinerary['date'] }}</p>
                 <div class="contents-wrapper">  
                     <div class="plan-wrapper">
                         <p>{{ $itinerary['time'] }}</p>
-                        <p>{{ $itinerary['date'] }}</p>
                     </div>
                     <div class="content-wrapper">
                         <p class="wrapper-text">{{ $itinerary['destination'] }}</p>
@@ -32,7 +31,7 @@
                 @endforeach
             </div>
         </div>
-        <a href="/hello/edit/{{ $trip->id}}" class="btn">このプランを編集する</a>
+        <a href="/travel/edit/{{ $trip->id}}" class="btn">このプランを編集する</a>
     </article>
 </main>
 @include('home.footer')

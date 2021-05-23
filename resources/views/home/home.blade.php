@@ -26,10 +26,23 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="/hello" class="log">ホーム</a></li>
-                    <li><a href="/hello/new" class="log">プラン作成</a></li>
-                    <li><a href="/hello/self" class="log">マイページ</a></li>                      
-                    <li><a href="/hello/pass" class="log">ログイン</a></li>                 
+                    <li><a href="/" class="log">ホーム</a></li>
+                    <li><a href="/travel/new" class="log">プラン作成</a></li>
+                    <li><a href="/travel/self" class="log">マイページ</a></li>                      
+                    @guest
+                    <li><a href="/travel/pass" class="log">ログイン</a></li>
+                    @endguest
+
+                    @auth
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <x-jet-dropdown-link class="log" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                this.closest('form').submit();">                               
+                            {{ __('ログアウト') }}
+                        </x-jet-dropdown-link>
+                    </form>     
+                    @endauth                
                 </ul>             
             </div>
         </nav>        
@@ -63,9 +76,7 @@
             <section class="design-section">
                 <h2>Instavelの3つの特徴</h2>
                 <div class="design-contents">
-                    <div class="design-img">
-                        <img src="{{ asset('img/future.jpg')}}" alt="">             
-                    </div>
+                    <img src="{{ asset('img/future.jpg')}}" alt="">             
                     <div class="design-text-box">
                         <div class="design-title">
                             <p>01</p>
@@ -120,26 +131,24 @@
 
             <section class="sub-section">
                 <h2>投稿プラン一覧</h2>
-                <div class="task-items ">
-                    @foreach ($trips as $trip)
+                @foreach ($trips as $trip)
                     <div class="task">
                         <div class="task-text">
-                            <a href="/hello/{{ $trip->id}}" class="btn-text">
+                            <a href="/travel/{{ $trip->id}}" class="task-btn">
                                 <img src="{{$trip->image}}" ale="画像" />
                                 <p>プラン名: {{ $trip->title }}</p>
                             </a>
                         </div>
                     </div>
                     <br>
-                    @endforeach
-                </div>
+                @endforeach
             </section>
         </article>
     </main>
 
     <footer>
         <div class="main-footer ">
-            <a href="/hello">Instavel</a>
+            <a href="/travel">Instavel</a>
             <p>© 2021 wataru takao</p>
         </div>
     </footer>

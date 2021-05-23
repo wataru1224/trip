@@ -1,26 +1,18 @@
 @include('home.header')
 <main>
   <article>
-    <!-- @if ($errors->any())
-      <div class="alert">
-        @foreach ($errors->all() as $error)
-          <p>{{ $error }}</p>
-        @endforeach
-      </div>
-    @endif -->
-
-    <form action="{{ url('/hello/create')}}" method="POST" enctype="multipart/form-data">
+    <form action="{{ url('/travel/create')}}" method="POST" enctype="multipart/form-data">
       {{ csrf_field() }} 
       <h2>旅行タイトル</h2> 
+      <div class="alert">
+        @if($errors->has('title'))
+          @foreach($errors->get('title') as $message)
+            {{ $message }}<br>
+          @endforeach
+        @endif 
+      </div>
       <div class="title-form">
         <div class="title-item">
-          <div class="alert">
-            @if($errors->has('title'))
-              @foreach($errors->get('title') as $message)
-                {{ $message }}<br>
-              @endforeach
-            @endif 
-          </div>
           <label for="">タイトル:</label>           
           <input type="text" name="title" value=""  placeholder="例：京都旅行"  class="edit-new">
         </div>
@@ -32,29 +24,23 @@
       
       <input type="hidden" name="trip-id" value=""> 
       <h2>旅行内容</h2>
+      <div class="alert">
+        @if($errors->has('itinerary.*.destination'))
+          ・日程と行先は必ず入力してください。
+          @foreach($errors->get('itinerary') as $message)
+            {{ $message }}<br>
+          @endforeach
+        @endif 
+      </div>
       <div id="item-list">
         <div class="item">
           <div class="main-item">
             <div class="main-items">
-              <div class="alert">
-                @if($errors->has('date','time'))
-                  @foreach($errors->get('title','time') as $message)
-                    {{ $message }}<br>
-                  @endforeach
-                @endif 
-              </div>
               <label for="">日程：</label>     
               <input type="date" name="itinerary[0][date]">
               <input type="time" name="itinerary[0][time]">
             </div>
             <div class="main-items">
-              <div class="alert">
-                @if($errors->has('itinerary[0][destination]'))
-                  @foreach($errors->get('[destination]') as $message)
-                    {{ $message }}<br>
-                  @endforeach
-                @endif 
-              </div>
               <label for="">行先：</label>
               <input type="text" name="itinerary[0][destination]" value="" placeholder="例：金閣寺" >
             </div>

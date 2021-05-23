@@ -143,12 +143,13 @@ main article {
   margin-bottom: 1.5rem;
 }
 
-.title-form .title-item .alert {
-  color: red;
-}
-
 .title-form .image-item {
   width: 100%;
+}
+
+.alert {
+  color: red;
+  text-align: left;
 }
 
 .item {
@@ -292,6 +293,9 @@ footer .main-footer a {
   padding-left: 1rem;
   margin-bottom: 2rem;
   text-align: left;
+}
+
+.sub-plan .border {
   border-left: solid 5px #107ef4;
 }
 

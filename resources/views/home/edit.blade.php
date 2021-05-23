@@ -2,7 +2,7 @@
 
 <main> 
   <article>
-    <form action="{{ url('/hello/create')}}" method="POST" enctype="multipart/form-data">
+    <form action="{{ url('/travel/create')}}" method="POST" enctype="multipart/form-data">
       {{ csrf_field() }} 
       <h2>旅行タイトル</h2> 
       <div class="title-form">

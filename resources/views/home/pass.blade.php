@@ -46,7 +46,7 @@
                             ログイン
                         </x-jet-button>
                     </div>
-                    <a href="/hello/register" class="btn">アカウント作成</a>
+                    <a href="/travel/register" class="btn">アカウント作成</a>
                 </form>
             </x-jet-authentication-card>
         </x-guest-layout>

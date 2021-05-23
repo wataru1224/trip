@@ -7,13 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Trip;
 use Symfony\Component\VarDumper\VarDumper;
 
-class HomeController extends Controller
+class TravelController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function home()
     {
         $itineraries = \App\Models\Itinerary::all();
@@ -29,13 +24,13 @@ class HomeController extends Controller
         $request->validate(
             [
             'title' => 'required',
-            'date' => 'required',
-            'destination' => 'required',
+            'itinerary.*.date' => 'required',
+            'itinerary.*.destination' => 'required',
         ],
             [
-            'title.required' => 'タイトルは必須です。',
-            'date.required' => '日程は必須です。',
-            'destination.required' => '行先は必須です。',
+            'title.required' => '・タイトルは必須です。',
+            'date.required' => '・日程は必須です。',
+            'destination.required' => '・行先は必須です。',
         ]
         );
 
@@ -69,7 +64,7 @@ class HomeController extends Controller
             "trip_id" => $trip->id,
         ]);
         }
-        return redirect("/hello"); // 一覧にリダイレクトさせる
+        return redirect("/travel"); // 一覧にリダイレクトさせる
     }
 
     public function trip()

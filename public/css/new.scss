@@ -108,7 +108,6 @@ main {
   }
 }
 
-
 .title-form {
   background-color: #eef2f3;
   color: #000;
@@ -117,15 +116,15 @@ main {
   text-align: left; 
   .title-item {
     margin-bottom: 1.5rem;
-    .alert {
-      color: red;
-    }
-  } 
+  }    
   .image-item {
     width: 100%;
   }
 }                                 
-
+.alert {
+  color: red;
+  text-align: left;
+}
 
 .item {
   background-color: #eef2f3;
@@ -246,6 +245,8 @@ footer {
     padding-left: 1rem;
     margin-bottom: 2rem;
     text-align: left;
+  }
+  .border {
     border-left: solid 5px #107ef4;
   }
 }

@@ -20,18 +20,23 @@
         <div id="global-nav">
             <nav>
                 <ul class="nav-wrap">
-                    <li><a href="/hello" class="log">ホーム</a></li>
-                    <li><a href="/hello/new" class="log">プラン作成</a></li>
-                    <li><a href="/hello/self" class="log">マイページ</a></li>
-                    <li><a href="/hello/pass" class="log">ログイン</a></li>
+                    <li><a href="/" class="log">ホーム</a></li>
+                    <li><a href="/travel/new" class="log">プラン作成</a></li>
+                    <li><a href="/travel/self" class="log">マイページ</a></li>
+                    @guest
+                    <li><a href="/travel/pass" class="log">ログイン</a></li>
+                    @endguest
+
+                    @auth
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <x-jet-dropdown-link href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                        this.closest('form').submit();">
-                            {{ __('Log Out') }}
+                        <x-jet-dropdown-link class="log" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                this.closest('form').submit();">                               
+                            {{ __('ログアウト') }}
                         </x-jet-dropdown-link>
-                    </form>              
+                    </form>     
+                    @endauth
                 </ul>                    
             </nav>
         </div>

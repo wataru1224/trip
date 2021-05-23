@@ -171,10 +171,11 @@ nav {
   width: 40%;
   height: 15rem;
   margin-top: 4rem;
+  text-align: center;
+
   img {
     width: 80%;
     height: 100%;  
-    text-align: center;
   }
 }
 
@@ -296,6 +297,9 @@ footer {
 
 //スマートフォン
 @media (max-width: 599px) {
+  p {
+    font-size: 1.3rem;
+  }
   //nav
   nav {
     width: 100%;
@@ -429,8 +433,11 @@ footer {
     width: 90%;
   }
   .sub-contents {
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    img {
+      width: 80%;
+    }
   }
 
   //design-section

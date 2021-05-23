@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/home.css">
-    <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
-    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
@@ -169,36 +167,6 @@
             //headerを取得する
             header.classList.toggle("scroll-nav", window.scrollY > 100);
         });
-    
-        //画像スライド
-        var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
-		    if (windowwidth > 768){
-                var responsiveImage = [//PC用の画像
-                    { src: 'https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-3/img/img_01.jpg'},
-                    { src: 'https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-3/img/img_02.jpg'},
-                    { src: 'https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-3/img/img_03.jpg'}
-            ];
-            } else {
-                var responsiveImage = [//タブレットサイズ（768px）以下用の画像
-                    { src: './img/img_sp_01.jpg' },
-                    { src: './img/img_sp_02.jpg' },
-                    { src: './img/img_sp_03.jpg' }
-                ];
-		    }
-
-        //Vegas全体の設定
-
-        $('#slider').vegas({
-            overlay: true,//画像の上に網線やドットのオーバーレイパターン画像を指定。
-            transition: 'blur',//切り替わりのアニメーション。http://vegas.jaysalvat.com/documentation/transitions/参照。fade、fade2、slideLeft、slideLeft2、slideRight、slideRight2、slideUp、slideUp2、slideDown、slideDown2、zoomIn、zoomIn2、zoomOut、zoomOut2、swirlLeft、swirlLeft2、swirlRight、swirlRight2、burnburn2、blurblur2、flash、flash2が設定可能。
-            transitionDuration: 2000,//切り替わりのアニメーション時間をミリ秒単位で設定
-            delay: 10000,//スライド間の遅延をミリ秒単位で。
-            animationDuration: 20000,//スライドアニメーション時間をミリ秒単位で設定
-            animation: 'kenburns',//スライドアニメーションの種類。http://vegas.jaysalvat.com/documentation/transitions/参照。kenburns、kenburnsUp、kenburnsDown、kenburnsRight、kenburnsLeft、kenburnsUpLeft、kenburnsUpRight、kenburnsDownLeft、kenburnsDownRight、randomが設定可能。
-            slides: responsiveImage,//画像設定を読む
-            //timer:false,// プログレスバーを非表示したい場合はこのコメントアウトを外してください
-        });
-
     </script>
 
 

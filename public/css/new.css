@@ -13,9 +13,8 @@ html {
 }
 
 body {
-  font-family: Shuei MaruGo B,"游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",  "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: YuGothic,'Yu Gothic','ヒラギノ明朝 ProN','Hiragino Mincho ProN','Arial',sans-serif;
   line-height: 1.7;
-  font-family: adobe-arabic, sans-serif;
   font-style: normal;
 }
 
@@ -78,7 +77,8 @@ a {
 
 .nav-header h1 {
   font-weight: bold;
-  margin: 1.5rem;
+  margin: 1.2rem;
+  font-size: 2rem;
   margin-left: 3rem;
 }
 

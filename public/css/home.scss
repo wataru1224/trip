@@ -10,7 +10,7 @@ html {
   font-size: 16px;
 }
 body {
-  font-family:  "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "メイリオ", sans-serif;
+  font-family: YuGothic,'Yu Gothic','ヒラギノ明朝 ProN','Hiragino Mincho ProN','Arial',sans-serif;
   line-height: 1.7;
 	font-style: normal;
 }
@@ -63,7 +63,7 @@ nav {
   width: 100%;
   margin: 0 auto;
   h1 {
-    font-size: 2rem;
+    font-size: 2.1rem;
     margin: 1.5rem;
     margin-left: 3rem;
   }
@@ -98,13 +98,9 @@ nav {
   margin-right: 3rem;
   border-bottom: none;
   color: #fff;
+  font-size: 16px;
 }
-// .menu ul li a {
-//   padding: 0 1em;
-//   margin-right: 3rem;
-//   border-bottom: none;
-//   color:#fff;
-// }
+
 .menu ul li a:hover{
   background-color:transparent;
 }

@@ -20,7 +20,6 @@ Route::get('/', [TravelController::class, 'home']);
 Route::get('/travel/{id}', [TravelController::class, 'show'])
     ->where('id', '[0-9]+');
     
-
 Route::get('/travel/self/', [TravelController::class,'self'])
     ->middleware('auth');
 

@@ -94,6 +94,10 @@ nav h1 {
   color: #000;
 }
 
+.scroll-nav > nav {
+  background-color: #fff;
+}
+
 .scroll-nav a {
   color: #000;
 }

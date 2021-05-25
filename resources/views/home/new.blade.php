@@ -25,10 +25,10 @@
       <input type="hidden" name="trip-id" value=""> 
       <h2>旅行内容</h2>
       <div class="alert">
-        @if($errors->has('itinerary.*.destination'))
-          ・日程と行先は必ず入力してください。
-          @foreach($errors->get('itinerary') as $message)
-            {{ $message }}<br>
+        @if($errors->has('itinerary.*'))
+          <!-- ・日程と行先は必ず入力してください。 -->
+          @foreach($errors->get('itinerary.*') as $message)
+            {{ $message[0] }}<br>
           @endforeach
         @endif 
       </div>

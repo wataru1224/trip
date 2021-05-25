@@ -29,17 +29,18 @@ class TravelController extends Controller
         ],
             [
             'title.required' => '・タイトルは必須です。',
-            'date.required' => '・日程は必須です。',
-            'destination.required' => '・行先は必須です。',
+            'itinerary.*.date.required' => '・タイトルは必須です。',
+            'itinerary.*.destination.required' => '・日程は必須です',
         ]
         );
-
+        
         $title = $request->input("title");//formで指定したtitleの値を取り出す
-        $image = $request->file("image")->store('public/image');
-        $temp_path = str_replace('public/', 'storage/', $image);
+        $temp_path = null;
+        if (!is_null($request->file("image"))) {
+            $image = $request->file("image")->store('public/image');
+            $temp_path = str_replace('public/', 'storage/', $image);
+        }
         $user = auth()->user();
-
-
 
         // 受け取った情報をDBに保存する
         $trip = \App\Models\Trip::create([
@@ -53,16 +54,19 @@ class TravelController extends Controller
         $images = $request->file("itinerary");
 
         foreach ($itineraries as $index => $itinerary) {
-            $image = $request->file("itinerary." . $index . ".image")->store("public/image");
-            $image_path = str_replace('public/', 'storage/', $image);
+            $image_path = null;
+            if (!is_null($request->file("itinerary." . $index . ".image"))) {
+                $image = $request->file("itinerary." . $index . ".image")->store("public/image");
+                $image_path = str_replace('public/', 'storage/', $image);
+            }
             \App\Models\Itinerary::create([
-            "date" => $itinerary["date"],
-            "time" => $itinerary["time"],
-            "destination" => $itinerary["destination"],
-            "contents" => $itinerary["contents"],
-            "image" => $image_path,
-            "trip_id" => $trip->id,
-        ]);
+                "date" => $itinerary["date"],
+                "time" => $itinerary["time"],
+                "destination" => !empty($itinerary["description"]) ? $itinerary["destination"] : "",
+                "contents" => $itinerary["contents"] ?? "",
+                "image" => $image_path,
+                "trip_id" => $trip->id,
+            ]);
         }
         return redirect("/travel"); // 一覧にリダイレクトさせる
     }
@@ -121,13 +125,4 @@ class TravelController extends Controller
             'title' => 'required|unique:posts',
         ]);
     }
-
-
-    //簡単ログイン
-    // public function pass($id)
-    // {
-    //     $trip = \App\Models\Trip::find($id);
-    //     $itineraries = \App\Models\Itinerary::where('trip_id', $trip->id)->get();
-    //     return view('home.pass', compact("itineraries", "trip"));
-    // }
 }

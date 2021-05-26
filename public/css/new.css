@@ -202,12 +202,16 @@ main article {
   display: block;
 }
 
+.form-btn .to {
+  padding: 0.5rem 2rem;
+}
+
 .form-btn .add-btn {
+  padding: 1rem 4rem;
   margin: 0 auto;
 }
 
 .form-btn .btn {
-  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   color: #fff;
   font-weight: bold;

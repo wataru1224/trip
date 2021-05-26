@@ -134,7 +134,7 @@
                         <div class="task-text">
                             <a href="/travel/{{ $trip->id}}" class="task-btn">
                                 <img src="{{$trip->image}}" ale="画像" />
-                                <p>プラン名: {{ $trip->title }}</p>
+                                <p> {{ $trip->title }}</p>
                             </a>
                         </div>
                     </div>

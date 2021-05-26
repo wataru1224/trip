@@ -163,11 +163,14 @@ main {
   button {
    display: block;
   }
+  .to {
+    padding: 0.5rem 2rem;
+  }
   .add-btn {
+    padding: 1rem 4rem;
     margin: 0 auto;
   }
   .btn {
-    padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     color: #fff;
     font-weight: bold;

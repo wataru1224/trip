@@ -23,7 +23,7 @@
       </div>
       
       <input type="hidden" name="trip-id" value=""> 
-      <h2>旅行内容</h2>
+      <h2>プラン内容</h2>
       <div class="alert">
         @if($errors->has('itinerary.*'))
           <!-- ・日程と行先は必ず入力してください。 -->
@@ -56,8 +56,8 @@
         </div>
       </div>
       <div class="form-btn">
-        <button type="button" name="to" class="btn left-btn" id="to">旅行内容を追加</button>
-        <button type="submit" name="add" class="btn add-btn">プランを投稿する</button>
+        <button type="button" name="to" class="btn to-btn" id="to">プランを追加</button>
+        <button type="submit" name="add" class="btn add-btn">プランを投稿</button>
       </div>
     </form>
   </article>

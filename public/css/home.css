@@ -309,14 +309,19 @@ nav h1 {
   text-align: center;
 }
 
-.task-text .task-btn {
+.task-btn {
   color: #555555;
   display: block;
 }
 
-.task-text .task-btn img {
+.task-btn img {
   width: 80%;
   text-align: center;
+}
+
+.task-btn p {
+  margin: 0.5rem;
+  font-weight: bold;
 }
 
 .btn {

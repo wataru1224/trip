@@ -14,6 +14,9 @@ body {
   line-height: 1.7;
 	font-style: normal;
 }
+p {
+  margin-bottom: 0;
+}
 img {
   max-width: 100%;
 }
@@ -164,8 +167,10 @@ nav {
   }
   p {
     line-height: 30px;
+    margin-bottom: 0;
   }
 }
+
 .sub-contents {
   width: 40%;
   height: 15rem;
@@ -203,7 +208,7 @@ nav {
   padding: 2rem 4rem;
   .design-title {
     display: flex;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
     font-weight: bold;
     line-height: 1.3rem;
     p {

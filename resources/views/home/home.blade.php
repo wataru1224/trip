@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/home.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/home.css">
     <title>Instavel</title>
 </head>
 
@@ -98,8 +98,8 @@
                             </h3>
                         </div>   
                         <div class="design-text">
-                            <p>こんな時期だけど旅行したい。</p>
-                            <p>でも混雑している場所には行きたくない。</p>
+                            <p>「こんな時期だけど旅行したい。」</p>
+                            <p>「でも混雑している場所には行きたくない。」</p>
                             <p>そんな考えの人も多いと思います。実際に旅行して混雑していたかを表示しているので安心してプランの参考にできます。</p>
                         </div> 
                     </div>

@@ -17,6 +17,10 @@ body {
   font-style: normal;
 }
 
+p {
+  margin-bottom: 0;
+}
+
 img {
   max-width: 100%;
 }
@@ -203,6 +207,7 @@ nav h1 {
 
 .main-content-wrapper p {
   line-height: 30px;
+  margin-bottom: 0;
 }
 
 .sub-contents {
@@ -252,7 +257,7 @@ nav h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
   font-weight: bold;
   line-height: 1.3rem;
 }

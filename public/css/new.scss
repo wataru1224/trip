@@ -50,33 +50,49 @@ a {
 }
 
 /* nav */
-.nav-header {  
+.nav-header {
   width: 100%;
+  color: #000;
+  background: #fff;
+  transition: 0.5s;
+}  
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #000;
-  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
   h1 {
-    font-weight: bold;
-    margin: 1.2rem;    
-    font-size: 2rem;
+    font-size: 2.1rem;
+    margin: 1.0rem;
     margin-left: 3rem;
-  }
-  nav {
-    .nav-wrap {
-      display: flex;
-      align-items: center;
-      a {
-        margin-right: 3rem;
-      }
-    }
+    font-family: sans-serif;
   }
 }
 
+.menu {
+  width: 100%;
+  font-size:0.9em;
+  background-color: transparent;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+dl, ol, ul {
+  margin-bottom: 0;
+}
 .log {
+  padding: 0 1em;
+  margin-right: 3rem;
+  border-bottom: none;
+  color: #000;
+  font-size: 16px;
   margin: 1rem;
-  color: #107ef4;
 }
 
 button {
@@ -204,6 +220,7 @@ footer {
     text-align: center;
     a {
       font-size: 2.5rem;
+      font-family: sans-serif;
     }
   }
 }
@@ -269,7 +286,7 @@ footer {
   width: 70%;
   margin-left: 3rem;
   margin-bottom: 3rem;
-  background-color: #3986d8;
+  background-color: #43a6f5;
   border-radius: 10px;
   .wrapper-text {
     border-bottom: solid 1px #fff;
@@ -332,157 +349,109 @@ article {
 
 @media (max-width: 599px) {  
   //nav
-  .nav-header {
-    h1 {
-    margin: 1rem;
+  nav {
+    position: none;
+    width: 100%;
+    height: 70px;
+    position: relative;
+    display: block
+  }
+
+  .drawer {
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /*ナビゲーション部分*/
+  .menu {
+    ul {
+      height: 100vh;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+      li {
+        width: 100%;
+      }
     }
   }
 
-  #nav-toggle {
-    position: fixed;
-    top: 25px;
-    right: 25px;
-    height: 32px;
-    cursor: pointer;
-    > div {
-      position: relative;
-      width: 36px;
-    }
-    span {
-      width: 100%;
-      height: 1px;
-      left: 0;
-      display: block;
-      background: #333;
-      position: absolute;
-      transition: transform .6s ease-in-out, top .5s ease;
-      
-      &:nth-child(1) {
-        top: 0;
-      }
-      &:nth-child(2) {
-        top: 14px;
-      }
-      &:nth-child(3) {
-        top: 28px;
-      }
-    }
-  
-    &:hover span:nth-child(1) {
-      top: 4px;
-    }
-    &:hover span:nth-child(3) {
-      top: 23px;
-    }
+  .menu ul li a {
+    display:block;
+    font-weight:bold;
+    padding: 2em;
+    border-bottom: 1px dotted #CCC;
+    text-decoration:none;
   }
-  
-  .open {
-    #nav-toggle span {
-      background: #fff;
-      
-      &:nth-child(1) {
-        top: 15px;
-        transform: rotate(45deg);
-      }
-      &:nth-child(2) {
-        top: 15px;
-        width: 0;
-        left: 50%;
-      }
-      &:nth-child(3) {
-        top: 15px;
-        transform: rotate(-45deg);
-      }
-    }
+  .menu ul li a:hover{
+    background-color:rgba(0,0,0,0.5);
+    color:orange;
   }
-  
-  /* z-index */
-  #nav-toggle {
-    z-index: 1000;
+
+  .menu{
+    text-align:center;
+    // background-color:rgba(255,255,255,0.5);
+    transition: 0.55s ease;/*滑らかに表示*/
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);/*左に隠しておく*/
+    background-color: rgba(46, 46, 46, 0.9);
   }
-  #container {
-    z-index: 900;
-  }
-  
-  #global-nav {
-    background: #000;
-    color: #fff;
+
+  /*OPEN時の動き*/
+  .menu.open {
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 990;
-    text-align: center;
-    display: flex;
-    visibility: hidden;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 29px;
-    opacity: 0;
-    transition: opacity .6s ease, visibility .6s ease;
+    z-index: 10;
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);/*中身を表示（右へスライド）*/
   }
-  
-  #global-nav {
-    a {
-      display: block;
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 0;
-      transition: color .6s ease;
-      
-      &:hover {
-        color: #666;
-      }
-    }
-    
-    ul {
-      list-style: none;
-      
-      li {
-        opacity: 0;
-        transform: translateX(200px);
-        transition:  transform .6s ease, opacity .2s ease;
-        a {
-          padding: 2em;
-          border-bottom: 1px dotted #CCC;
-        }
-  
-        &:nth-child(2) {
-          transition-delay: .15s;
-        }
-        &:nth-child(3) {
-          transition-delay: .3s;
-        }
-        &:nth-child(4) {
-          transition-delay: .45s;
-        }
-        &:nth-child(5) {
-          transition-delay: .6s;
-        }
-        &:nth-child(6) {
-          transition-delay: .75s;
-        }
-        &:nth-child(7) {
-          transition-delay: .9s;
-        }
-      }
-    }
-  } 
-  
-  /* open */
-  .open {
-    overflow: hidden;
-    #global-nav {
-      visibility: visible;
-      opacity: 1;
-    }
-    #global-nav li {
-      opacity: 1;
-      transform: translateX(0);
-      transition:  transform 1s ease, opacity .9s ease;
-    }
+
+  /*トグルボタンのスタイルを指定*/
+  .Toggle {
+    display: block;
+    cursor: pointer;
+    z-index: 3;
+    right:50px;
+    color:#000;
+    position: relative;
+    bottom: 20px;
+    right: 100px;
+  }
+
+  .Toggle span {
+    display: block;
+    position: absolute;
+    width: 50px;
+    border-bottom: solid 4px #000;
+    -webkit-transition: .35s ease-in-out;	/*変化の速度を指定*/
+    -moz-transition: .35s ease-in-out;		/*変化の速度を指定*/
+    transition: .35s ease-in-out;			/*変化の速度を指定*/
+  }
+  /*各ボーダー少しずつずらす*/
+  .Toggle span:nth-child(1) {
+    top:5px;
+  }
+  .Toggle span:nth-child(2) {
+    top: 18px;
+  }
+  .Toggle span:nth-child(3) {
+    top: 32px;
+  }
+  .Toggle.active span:nth-child(1) {
+    top: 18px;
+  /* 1番目のspanをマイナス45度に */
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  /* 2番目と3番目のspanを45度に */
+  .Toggle.active span:nth-child(2),.Toggle.active span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
   }
 
   //new プラン作成

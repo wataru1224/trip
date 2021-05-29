@@ -9,48 +9,49 @@
 </head>
 <body>
     <header class="nav-header">
-        <h1>Instavel</h1>
-        <div id="nav-toggle">
-            <div>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>  
-        </div>
-        <div id="global-nav">
-            <nav>
-                <ul class="nav-wrap">
+        <nav> 
+            <div class="drawer">
+                <h1>Instavel</h1>
+                <div class="Toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div> 
+            </div>
+            <div class="menu">
+                <ul>
                     <li><a href="/" class="log">ホーム</a></li>
                     <li><a href="/travel/new" class="log">プラン作成</a></li>
-                    <li><a href="/travel/self" class="log">マイページ</a></li>
+                    <li><a href="/travel/self" class="log">マイページ</a></li>                      
                     @guest
                     <li><a href="/travel/pass" class="log">ログイン</a></li>
                     @endguest
-
-                    @auth
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <x-jet-dropdown-link class="log" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                                this.closest('form').submit();">                               
-                            {{ __('ログアウト') }}
-                        </x-jet-dropdown-link>
-                    </form>     
-                    @endauth
-                </ul>                    
-            </nav>
-        </div>
-    </header>  
+                    <li>
+                         @auth
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <x-jet-dropdown-link class="log" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                    this.closest('form').submit();">                               
+                                {{ __('ログアウト') }}
+                            </x-jet-dropdown-link>
+                        </form>     
+                        @endauth     
+                    </li>           
+                </ul>             
+            </div>
+        </nav>        
+    </header>
 </body>
 
 <script>
-    (function($) {
-        $(function () {
-            $('#nav-toggle').on('click', function() {
-                $('body').toggleClass('open');
-            });
+    //ハンバーガ
+    $(function() {
+        $('.Toggle').click(function() {
+            $(this).toggleClass('active');
+            $('.menu').toggleClass('open');
         });
-    })(jQuery);
+    });
 </script>
 
 <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">

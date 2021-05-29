@@ -2115,10 +2115,7 @@ video {
   background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
 }
 
-.bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
-}
+
 
 .bg-gray-200 {
   --tw-bg-opacity: 1;
@@ -175438,9 +175435,6 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
-  display: block;
-}
 
 body {
   margin: 0;
@@ -175490,12 +175484,6 @@ address {
   line-height: inherit;
 }
 
-ol,
-ul,
-dl {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
 
 ol ol,
 ul ul,
@@ -175543,7 +175531,6 @@ sup {
 }
 
 a {
-  color: #3490dc;
   text-decoration: none;
   background-color: transparent;
 }

@@ -54,7 +54,7 @@ a {
 .nav-header {
   width: 100%;
   position: absolute;
-  z-index: 100;
+  z-index: 1;
   color: #fff;
   transition: 0.5s;
 }  
@@ -67,22 +67,9 @@ nav {
   margin: 0 auto;
   h1 {
     font-size: 2.1rem;
-    margin: 1.5rem;
+    margin: 1.0rem;
     margin-left: 3rem;
-  }
-}
-
-
-//スクロールした時のnav
-.scroll-nav {
-  background-color: #fff;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  color: #000;
-  & > nav {
-    background-color: #fff;
-  }
-  a {
-    color: #000;
+    font-family: sans-serif;
   }
 }
 
@@ -98,6 +85,9 @@ nav {
     justify-content: flex-end;
     align-items: center;
   }
+}
+dl, ol, ul {
+  margin-bottom: 0;
 }
 .log {
   padding: 0 1em;
@@ -161,9 +151,16 @@ nav {
 .main-content-wrapper {
   width: 50%;
   margin: 2rem;
+  h2 {
+    padding-bottom: 2rem;
+  }
   span {
+    font-family: sans-serif;
     font-weight: bold;
     font-size: 1.5rem;
+  }
+  .space {
+    margin: 1rem 0;
   }
   p {
     line-height: 30px;
@@ -190,6 +187,9 @@ nav {
   h2 {
     text-align: center;
   }
+  span {
+    font-family: sans-serif;
+  }
 }
 .design-contents {
   width: 75%;
@@ -215,7 +215,6 @@ nav {
       font-size: 2rem;
       position: relative;
       padding: 0.5rem;
-      font-family: Roboto;
     }
     p::after {
       content: "";
@@ -242,34 +241,23 @@ nav {
   width: 100%;
 }
 .task {
-  border-radius: 0.25rem;
   display: flex;
-  justify-content: space-between;
-  background: #eef2f3;
+  flex-wrap: wrap;
+}
+.task-items {
   width: 40%;
-  padding: 0.7rem 0;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
+  padding-bottom: 4rem;
   margin: 0 auto;
-}
-
-.task-text {
-  width: 100%;
-  word-break: break-all;
-  text-align: center;
-}  
-.task-btn {
-  color: #555555;
-  display: block;
-  img {
-    width: 80%;
-    text-align: center;  
-  }
   p {
-    margin: 0.5rem;
+    padding: 0.5rem;
     font-weight: bold;
+    color: #000;
+    background-color: rgb(235, 235, 235);
+  }
+  img {
+    width: 100%;
   }
 }
-
 
 .btn {
   padding: 0.5rem 1rem;
@@ -293,9 +281,26 @@ footer {
     text-align: center;
     a {
       font-size: 2.5rem;
+      font-family: sans-serif;
     }
   }
 }
+
+@media (min-width:600px) {
+  //スクロールした時のnav
+  .scroll-nav {
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    color: #000;
+    & > nav {
+      background:rgba(162, 180, 185, 0.5);
+    }
+    a {
+      color: #000;
+    }
+  }
+}
+
 
 
 //タブレット
@@ -306,11 +311,18 @@ footer {
 
 //スマートフォン
 @media (max-width: 599px) {
+
+  h2 {
+    margin-bottom: 0;
+    padding-bottom: 2rem;
+  }
   p {
-    font-size: 1.3rem;
+    font-size: 18px;
+    line-height: 32px;
   }
   //nav
   nav {
+    position: none;
     width: 100%;
     height: 70px;
     position: relative;
@@ -318,22 +330,19 @@ footer {
   }
 
   .drawer {
+    z-index: 10;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    position: relative;
-    position:fixed;
-    top: 0;
-    left: 0;
-    height: 70px;
-    padding: 0 1em;
   }
 
   /*ナビゲーション部分*/
   .menu {
     ul {
       height: 100vh;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
       li {
         width: 100%;
       }
@@ -363,6 +372,8 @@ footer {
 
   /*OPEN時の動き*/
   .menu.open {
+    position: fixed;
+    top: 0;
     -webkit-transform: translateX(0%);
     transform: translateX(0%);/*中身を表示（右へスライド）*/
   }
@@ -370,13 +381,13 @@ footer {
   /*トグルボタンのスタイルを指定*/
   .Toggle {
     display: block;
-    position: fixed;    /* bodyに対しての絶対位置指定 */
-    width: 42px;
-    height: 42px;
     cursor: pointer;
     z-index: 3;
-    right:30px;
+    right:50px;
     color:#FFF;
+    position: relative;
+    bottom: 20px;
+    right: 100px;
   }
 
   .Toggle span {
@@ -431,19 +442,29 @@ footer {
 
   //main-section
   .main-section{
-    width: 100%;
+    width: 90%;
     padding: 0;
   }  
   .main-contents-wrapper {
-    width: 90%;
     display: block;
+    width: 100%;
   }  
   .main-content-wrapper {
-    width: 90%;
+    width: 100%;
+    h2 {
+      margin-top: 4rem;
+    }
+    .space {
+      margin: 0.5rem 0;
+    }
+    p{
+      line-height: 2rem;
+    }
   }
   .sub-contents {
     width: 100%;
     text-align: center;
+    margin-top: 0;
     img {
       width: 80%;
     }
@@ -455,12 +476,21 @@ footer {
     margin: 0 auto;
     h2 {
       padding: 0;
+      margin-top: 4rem;
+      font-weight: bold;
     }
   }
   .design-contents {
     width: 100%;
     display: flex;
     flex-direction: column-reverse;
+  }  
+  .design-img {
+    text-align: center;
+    img {
+      width: 50%;
+      height: 200px;
+    }
   }
   .design-text-box {
     width: 100%;
@@ -475,13 +505,22 @@ footer {
       }
     }
   }
+  .reverse {
+    display: flex;
+    flex-direction: column;
+  }
     
   //sub-section
-  .task {
-    width: 90%;
+  .sub-section {
+    padding: 0;
+    h2 {
+      padding-top: 2rem;
+      font-weight: bold;
+    }
   }
-
-
+  .task-items {
+    width: 80%;
+  }
 
 }
 

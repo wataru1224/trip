@@ -12,7 +12,7 @@
         </div>
         <div class="image-item">
           <label for="">メイン画像:</label> 
-          <input type="file" name="image" accept="image/png, image/jpeg" size="30">
+          <input type="file" name="image" accept="image/png, image/jpeg" value="{{ $trip['image'] }}" size="30">
         </div>
       </div>
       
@@ -39,7 +39,7 @@
 
           <div class="image">
             <label for="">サブ画像:</label> 
-            <input type="file" name="itinerary[0][image]" size="30">
+            <input type="file" name="itinerary[0][image]" value="{{ $itinerary['image'] }}" size="30">
           </div>  
           <button type="reset" class="btn">内容を削除する</button>  
         </div>

@@ -59,16 +59,17 @@ class TravelController extends Controller
                 $image = $request->file("itinerary." . $index . ".image")->store("public/image");
                 $image_path = str_replace('public/', 'storage/', $image);
             }
+            var_dump($itinerary);
             \App\Models\Itinerary::create([
                 "date" => $itinerary["date"],
                 "time" => $itinerary["time"],
-                "destination" => !empty($itinerary["description"]) ? $itinerary["destination"] : "",
+                "destination" => !empty($itinerary["destination"]) ? $itinerary["destination"] : "",
                 "contents" => $itinerary["contents"] ?? "",
                 "image" => $image_path,
                 "trip_id" => $trip->id,
             ]);
         }
-        return redirect("/travel"); // 一覧にリダイレクトさせる
+        return redirect("/"); // 一覧にリダイレクトさせる
     }
 
     public function trip()

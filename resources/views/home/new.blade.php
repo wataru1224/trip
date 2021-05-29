@@ -26,7 +26,6 @@
       <h2>プラン内容</h2>
       <div class="alert">
         @if($errors->has('itinerary.*'))
-          <!-- ・日程と行先は必ず入力してください。 -->
           @foreach($errors->get('itinerary.*') as $message)
             {{ $message[0] }}<br>
           @endforeach
@@ -42,7 +41,7 @@
             </div>
             <div class="main-items">
               <label for="">行先：</label>
-              <input type="text" name="itinerary[0][destination]" value="" placeholder="例：金閣寺" >
+              <input type="text" name="itinerary[0][destination]" placeholder="例：金閣寺" >
             </div>
           </div>
           <div class="sub-item">

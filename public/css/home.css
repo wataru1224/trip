@@ -64,7 +64,7 @@ a {
 .nav-header {
   width: 100%;
   position: absolute;
-  z-index: 100;
+  z-index: 1;
   color: #fff;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -87,23 +87,9 @@ nav {
 
 nav h1 {
   font-size: 2.1rem;
-  margin: 1.5rem;
+  margin: 1.0rem;
   margin-left: 3rem;
-}
-
-.scroll-nav {
-  background-color: #fff;
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  color: #000;
-}
-
-.scroll-nav > nav {
-  background-color: #fff;
-}
-
-.scroll-nav a {
-  color: #000;
+  font-family: sans-serif;
 }
 
 .menu {
@@ -126,6 +112,10 @@ nav h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+dl, ol, ul {
+  margin-bottom: 0;
 }
 
 .log {
@@ -200,9 +190,18 @@ nav h1 {
   margin: 2rem;
 }
 
+.main-content-wrapper h2 {
+  padding-bottom: 2rem;
+}
+
 .main-content-wrapper span {
+  font-family: sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
+}
+
+.main-content-wrapper .space {
+  margin: 1rem 0;
 }
 
 .main-content-wrapper p {
@@ -228,6 +227,10 @@ nav h1 {
 
 .design-section h2 {
   text-align: center;
+}
+
+.design-section span {
+  font-family: sans-serif;
 }
 
 .design-contents {
@@ -266,7 +269,6 @@ nav h1 {
   font-size: 2rem;
   position: relative;
   padding: 0.5rem;
-  font-family: Roboto;
 }
 
 .design-text-box .design-title p::after {
@@ -293,40 +295,28 @@ nav h1 {
 }
 
 .task {
-  border-radius: 0.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background: #eef2f3;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.task-items {
   width: 40%;
-  padding: 0.7rem 0;
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
-          box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
+  padding-bottom: 4rem;
   margin: 0 auto;
 }
 
-.task-text {
-  width: 100%;
-  word-break: break-all;
-  text-align: center;
-}
-
-.task-btn {
-  color: #555555;
-  display: block;
-}
-
-.task-btn img {
-  width: 80%;
-  text-align: center;
-}
-
-.task-btn p {
-  margin: 0.5rem;
+.task-items p {
+  padding: 0.5rem;
   font-weight: bold;
+  color: #000;
+  background-color: #ebebeb;
+}
+
+.task-items img {
+  width: 100%;
 }
 
 .btn {
@@ -354,19 +344,42 @@ footer .main-footer {
 
 footer .main-footer a {
   font-size: 2.5rem;
+  font-family: sans-serif;
+}
+
+@media (min-width: 600px) {
+  .scroll-nav {
+    background-color: #fff;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    color: #000;
+  }
+  .scroll-nav > nav {
+    background: rgba(162, 180, 185, 0.5);
+  }
+  .scroll-nav a {
+    color: #000;
+  }
 }
 
 @media (max-width: 599px) {
+  h2 {
+    margin-bottom: 0;
+    padding-bottom: 2rem;
+  }
   p {
-    font-size: 1.3rem;
+    font-size: 18px;
+    line-height: 32px;
   }
   nav {
+    position: none;
     width: 100%;
     height: 70px;
     position: relative;
     display: block;
   }
   .drawer {
+    z-index: 10;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -380,16 +393,12 @@ footer .main-footer a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    position: relative;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 70px;
-    padding: 0 1em;
   }
   /*ナビゲーション部分*/
   .menu ul {
     height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .menu ul li {
     width: 100%;
@@ -417,6 +426,8 @@ footer .main-footer a {
   }
   /*OPEN時の動き*/
   .menu.open {
+    position: fixed;
+    top: 0;
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
     /*中身を表示（右へスライド）*/
@@ -424,14 +435,13 @@ footer .main-footer a {
   /*トグルボタンのスタイルを指定*/
   .Toggle {
     display: block;
-    position: fixed;
-    /* bodyに対しての絶対位置指定 */
-    width: 42px;
-    height: 42px;
     cursor: pointer;
     z-index: 3;
-    right: 30px;
+    right: 50px;
     color: #FFF;
+    position: relative;
+    bottom: 20px;
+    right: 100px;
   }
   .Toggle span {
     display: block;
@@ -478,19 +488,29 @@ footer .main-footer a {
     left: 5%;
   }
   .main-section {
-    width: 100%;
+    width: 90%;
     padding: 0;
   }
   .main-contents-wrapper {
-    width: 90%;
     display: block;
+    width: 100%;
   }
   .main-content-wrapper {
-    width: 90%;
+    width: 100%;
+  }
+  .main-content-wrapper h2 {
+    margin-top: 4rem;
+  }
+  .main-content-wrapper .space {
+    margin: 0.5rem 0;
+  }
+  .main-content-wrapper p {
+    line-height: 2rem;
   }
   .sub-contents {
     width: 100%;
     text-align: center;
+    margin-top: 0;
   }
   .sub-contents img {
     width: 80%;
@@ -501,6 +521,8 @@ footer .main-footer a {
   }
   .design-section h2 {
     padding: 0;
+    margin-top: 4rem;
+    font-weight: bold;
   }
   .design-contents {
     width: 100%;
@@ -511,6 +533,13 @@ footer .main-footer a {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+  .design-img {
+    text-align: center;
+  }
+  .design-img img {
+    width: 50%;
+    height: 200px;
   }
   .design-text-box {
     width: 100%;
@@ -523,8 +552,24 @@ footer .main-footer a {
     padding-top: 0.8rem;
     margin: 0 auto;
   }
-  .task {
-    width: 90%;
+  .reverse {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .sub-section {
+    padding: 0;
+  }
+  .sub-section h2 {
+    padding-top: 2rem;
+    font-weight: bold;
+  }
+  .task-items {
+    width: 80%;
   }
 }
 /*# sourceMappingURL=home.css.map */

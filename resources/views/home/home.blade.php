@@ -30,17 +30,18 @@
                     @guest
                     <li><a href="/travel/pass" class="log">ログイン</a></li>
                     @endguest
-
-                    @auth
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <x-jet-dropdown-link class="log" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                                this.closest('form').submit();">                               
-                            {{ __('ログアウト') }}
-                        </x-jet-dropdown-link>
-                    </form>     
-                    @endauth                
+                    <li>
+                         @auth
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <x-jet-dropdown-link class="log" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                    this.closest('form').submit();">                               
+                                {{ __('ログアウト') }}
+                            </x-jet-dropdown-link>
+                        </form>     
+                        @endauth     
+                    </li>           
                 </ul>             
             </div>
         </nav>        
@@ -58,8 +59,7 @@
                     <div class="main-content-wrapper">
                         <h2>旅行プランを作成して<br>
                         プランを投稿してみませんか？</h2>
-                        <p>旅行のプランを作って保存・投稿できるサービス<span>「Instavel」</span></p>
-                        <br>
+                        <p class="space">旅行のプランを作って保存・投稿できるサービス<span>「Instavel」</span></p>
                         <p>旅行プランを保存しておくだけでなく、プラン作成後に投稿することで旅行内容をシェアすることができます。</p>
                         <p>投稿された旅行内容を見れば、他の人のプランを参考にすることができるので、行きたい旅行プランが簡単にみつかります。</p>
                         <p></p>
@@ -72,9 +72,11 @@
             </section>
 
             <section class="design-section">
-                <h2>Instavelの3つの特徴</h2>
+                <h2><span>Instavel</span>の3つの特徴</h2>
                 <div class="design-contents">
-                    <img src="{{ asset('img/future.jpg')}}" alt="">             
+                    <div class="design-img">
+                        <img src="{{ asset('img/future.jpg')}}" alt="">             
+                    </div>
                     <div class="design-text-box">
                         <div class="design-title">
                             <p>01</p>
@@ -129,17 +131,17 @@
 
             <section class="sub-section">
                 <h2>投稿プラン一覧</h2>
-                @foreach ($trips as $trip)
-                    <div class="task">
-                        <div class="task-text">
-                            <a href="/travel/{{ $trip->id}}" class="task-btn">
-                                <img src="{{$trip->image}}" ale="画像" />
-                                <p> {{ $trip->title }}</p>
-                            </a>
-                        </div>
-                    </div>
-                    <br>
-                @endforeach
+                <div class="task">                            
+                    @foreach ($trips as $trip)
+                    <div class="task-items">
+                        <a href="/travel/{{ $trip->id}}" class="task-btn">
+                            <img src="{{$trip->image}}" ale="旅行画像" />
+                            <p> {{ $trip->title }}</p>
+                        </a>
+                    </div>                            
+                    @endforeach
+                </div>
+                <br>
             </section>
         </article>
     </main>

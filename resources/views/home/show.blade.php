@@ -17,13 +17,14 @@
                 <h2>プラン</h2>
                 <br>
                 @foreach ($itineraries as $itinerary)
-                <?php
-                var_dump($itinerary);
-                ?>
                 <p class="border">{{ $itinerary['date'] }}</p>
                 <div class="contents-wrapper">  
                     <div class="plan-wrapper">
-                        <p>{{ $itinerary['time'] }}</p>
+                        <?php
+                        $time = new DateTime($itinerary['time']);
+                        ?>
+                       
+                        <p>{{$time->format('H:i')}}</p>
                     </div>
                     <div class="content-wrapper">
                         <p class="wrapper-text">{{ $itinerary['destination'] }}</p>   
@@ -38,5 +39,7 @@
         <a href="/travel/edit/{{ $trip->id}}" class="btn">このプランを編集する</a>
         @endif
     </article>
+
 </main>
+
 @include('home.footer')

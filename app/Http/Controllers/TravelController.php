@@ -90,7 +90,6 @@ class TravelController extends Controller
     public function show($id)
     {
         $trip = \App\Models\Trip::find($id);
-        // $itineraries = \App\Models\Itinerary::where('trip_id', $trip->id)->get();
         $itineraries = $trip->itineraries;
         return view('home.show', compact("itineraries", "trip"));
     }

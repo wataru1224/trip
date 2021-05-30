@@ -23,8 +23,8 @@
                         <?php
                         $time = new DateTime($itinerary['time']);
                         ?>
-                       
                         <p>{{$time->format('H:i')}}</p>
+                        <p>test</p>
                     </div>
                     <div class="content-wrapper">
                         <p class="wrapper-text">{{ $itinerary['destination'] }}</p>   

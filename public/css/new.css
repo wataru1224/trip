@@ -455,10 +455,10 @@ article .task-items .task .task-text .btn-text img {
     padding: 2em;
     border-bottom: 1px dotted #CCC;
     text-decoration: none;
+    color: #fff;
   }
   .menu ul li a:hover {
     background-color: rgba(0, 0, 0, 0.5);
-    color: orange;
   }
   .menu {
     text-align: center;
@@ -483,7 +483,7 @@ article .task-items .task .task-text .btn-text img {
   .Toggle {
     display: block;
     cursor: pointer;
-    z-index: 3;
+    z-index: 20;
     right: 50px;
     color: #000;
     position: relative;
@@ -516,12 +516,14 @@ article .task-items .task .task-text .btn-text img {
     /* 1番目のspanをマイナス45度に */
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
+    border-bottom: solid 4px #fff;
   }
   /* 2番目と3番目のspanを45度に */
   .Toggle.active span:nth-child(2), .Toggle.active span:nth-child(3) {
     top: 18px;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
+    border-bottom: solid 4px #fff;
   }
   main article {
     width: 100%;

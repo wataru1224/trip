@@ -383,10 +383,10 @@ article {
     padding: 2em;
     border-bottom: 1px dotted #CCC;
     text-decoration:none;
+    color: #fff;
   }
   .menu ul li a:hover{
     background-color:rgba(0,0,0,0.5);
-    color:orange;
   }
 
   .menu{
@@ -411,7 +411,7 @@ article {
   .Toggle {
     display: block;
     cursor: pointer;
-    z-index: 3;
+    z-index: 20;
     right:50px;
     color:#000;
     position: relative;
@@ -444,6 +444,7 @@ article {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     transform: rotate(-45deg);
+    border-bottom: solid 4px #fff;
   }
 
   /* 2番目と3番目のspanを45度に */
@@ -452,6 +453,8 @@ article {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     transform: rotate(45deg);
+    border-bottom: solid 4px #fff;
+
   }
 
   //new プラン作成

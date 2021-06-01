@@ -135,7 +135,7 @@
                     @foreach ($trips as $trip)
                     <div class="task-items">
                         <a href="/travel/{{ $trip->id}}" class="task-btn">
-                            <img src="{{$trip->image}}" ale="旅行画像" />
+                            <img src="{{$trip->image}}" alt="旅行画像" />
                             <p> {{ $trip->title }}</p>
                         </a>
                     </div>                            

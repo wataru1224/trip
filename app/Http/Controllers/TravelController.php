@@ -19,22 +19,20 @@ class TravelController extends Controller
         //viewのhomeでitinerariesを使えるようにcompactでviewに渡す
     }
 
-    public function upload(Request $request)
+    public function upload($image)
     {
-        $data = $request->all();
-        if ($logo = $request->file('logo')) {
-            $image_name = $logo->getRealPath();
-            // Cloudinaryへアップロード
-            Cloudder::upload($image_name, null);
-            list($width, $height) = getimagesize($image_name);
-            // 直前にアップロードした画像のユニークIDを取得します。
-            $publicId = Cloudder::getPublicId();
-            // URLを生成します
-            $logoUrl = Cloudder::show($publicId, [
-                'width'     => $width,
-                'height'    => $height
-            ]);
-        }
+        $image_name = $image->getRealPath();
+        // Cloudinaryへアップロード
+        Cloudder::upload($image_name, null);
+        list($width, $height) = getimagesize($image_name);
+        // 直前にアップロードした画像のユニークIDを取得します。
+        $publicId = Cloudder::getPublicId();
+        // URLを生成します
+        $image_url = Cloudder::show($publicId, [
+            'width'     => $width,
+            'height'    => $height
+        ]);
+        return $image_url;
     }
 
     // formのnameで指定した情報Requestで受け取る
@@ -55,10 +53,19 @@ class TravelController extends Controller
         
         $title = $request->input("title");//formで指定したtitleの値を取り出す
         $temp_path = null;
+
+        //クラウディナリーへ画像を保存する
+
+
+
         if (!is_null($request->file("image"))) {
-            $image = $request->file("image")->store('public/image');
-            $temp_path = str_replace('public/', 'storage/', $image);
+            $temp_path = $this->upload($request->file("image"));
+            // $image = $request->file("image")->store('public/image');
+            // $temp_path = str_replace('public/', 'storage/', $image);
         }
+
+
+
         $user = auth()->user();
 
         // 受け取った情報をDBに保存する
@@ -70,13 +77,12 @@ class TravelController extends Controller
          ]);
 
         $itineraries = $request->input("itinerary");
-        $images = $request->file("itinerary");
-
         foreach ($itineraries as $index => $itinerary) {
             $image_path = null;
             if (!is_null($request->file("itinerary." . $index . ".image"))) {
-                $image = $request->file("itinerary." . $index . ".image")->store("public/image");
-                $image_path = str_replace('public/', 'storage/', $image);
+                // $image = $request->file("itinerary." . $index . ".image")->store("public/image");
+                // $image_path = str_replace('public/', 'storage/', $image);
+                $image_path = $this->upload($request->file("itinerary." . $index . ".image"));
             }
             var_dump($itinerary);
             \App\Models\Itinerary::create([

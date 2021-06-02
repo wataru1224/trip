@@ -6,6 +6,7 @@ use App\Models\Itinerary;
 use Illuminate\Http\Request;
 use App\Models\Trip;
 use Symfony\Component\VarDumper\VarDumper;
+use JD\Cloudder\Facades\Cloudder;
 
 class TravelController extends Controller
 {
@@ -16,6 +17,24 @@ class TravelController extends Controller
         //itineraryのtitle,dateなどのカラムをitinerariesに代入
         return view('home.home', compact("itineraries", "trips"));
         //viewのhomeでitinerariesを使えるようにcompactでviewに渡す
+    }
+
+    public function upload(Request $request)
+    {
+        $data = $request->all();
+        if ($logo = $request->file('logo')) {
+            $image_name = $logo->getRealPath();
+            // Cloudinaryへアップロード
+            Cloudder::upload($image_name, null);
+            list($width, $height) = getimagesize($image_name);
+            // 直前にアップロードした画像のユニークIDを取得します。
+            $publicId = Cloudder::getPublicId();
+            // URLを生成します
+            $logoUrl = Cloudder::show($publicId, [
+                'width'     => $width,
+                'height'    => $height
+            ]);
+        }
     }
 
     // formのnameで指定した情報Requestで受け取る

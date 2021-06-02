@@ -35,17 +35,19 @@
                         </label>
                     </div>
 
-                    <div class="flex items-center justify-end mt-4">
-                        <x-jet-button class="ml-4">
+                    <div class="flex items-center mt-4">
+                        <x-jet-button class="ml-4 mb-4">
                             ログイン
                         </x-jet-button>
-
+                    </div>
+                    <div>
                         @if (Route::has('password.request'))
                             <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
                                 パスワードを忘れましたか？
                             </a>
                         @endif
                     </div>
+
                     <a href="/travel/register" class="btn">アカウント作成</a>
                 </form>
             </x-jet-authentication-card>

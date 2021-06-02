@@ -13986,9 +13986,9 @@ video {
   min-height: 100%;
 }
 
-.min-h-screen {
+/* .min-h-screen {
   min-height: 100vh;
-}
+} */
 
 .min-w-0 {
   min-width: 0px;
@@ -130594,7 +130594,7 @@ video {
   }
 
   .xl\:min-h-screen {
-    min-height: 100vh;
+    /* min-height: 100vh; */
   }
 
   .xl\:min-w-0 {

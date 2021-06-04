@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/new.css') }}">   
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/new.css') }}">   
     <title>Instavel</title>
 </head>
 <body>

@@ -44,3 +44,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::post('travel/new', [TravelController::class, 'store']);
+
+Route::get('/travel/delete/{id}', [TravelController::class, 'delete']);

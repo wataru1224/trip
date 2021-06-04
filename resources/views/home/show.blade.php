@@ -11,7 +11,7 @@
                     <p>更新日時:{{ $trip['updated_at'] }}</p>
                 </div>
             </div>
-            <img src="{{$trip->image}}" ale="メイン画像" />
+            <img src="{{asset('/')}}{{$trip->image}}" ale="メイン画像" />
 
             <div class="sub-plan">
                 <h2>プラン</h2>
@@ -29,7 +29,7 @@
                     <div class="content-wrapper">
                         <p class="wrapper-text">{{ $itinerary['destination'] }}</p>   
                         <p>{{ $itinerary['contents'] }}</p>
-                        <img src="{{$itinerary->image}}" onerror="this.onerror = null; this.src='';" />    
+                        <img src="{{asset('/')}}{{$itinerary->image}}" onerror="this.onerror = null; this.src='';" />    
                     </div>
                 </div>
                 @endforeach                    

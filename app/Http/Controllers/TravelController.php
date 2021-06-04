@@ -55,16 +55,11 @@ class TravelController extends Controller
         $temp_path = null;
 
         //クラウディナリーへ画像を保存する
-
-
-
         if (!is_null($request->file("image"))) {
             $temp_path = $this->upload($request->file("image"));
             // $image = $request->file("image")->store('public/image');
             // $temp_path = str_replace('public/', 'storage/', $image);
         }
-
-
 
         $user = auth()->user();
 
@@ -109,6 +104,14 @@ class TravelController extends Controller
         $user = auth()->user();
         $trips = \App\Models\Trip::where('user_id', $user->id)->get();
         return view('home.self', compact("trips"));
+    }
+
+    //プラン削除
+    public function delete($id)
+    {
+        $trip = \App\Models\Trip::find($id);
+        $trip->delete();
+        return redirect("/travel/self");
     }
 
     // show メソッドで変数\$id を引数で受け取る

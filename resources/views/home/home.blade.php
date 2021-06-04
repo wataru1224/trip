@@ -25,7 +25,7 @@
             <div class="menu">
                 <ul>
                     <li><a href="/" class="log">ホーム</a></li>
-                    <li><a href="/travel/new" class="log">プラン作成</a></li>
+                    <li><a href="{{ secure_asset('/travel/new')}}" class="log">プラン作成</a></li>
                     <li><a href="/travel/self" class="log">マイページ</a></li>                      
                     @guest
                     <li><a href="/travel/pass" class="log">ログイン</a></li>
@@ -59,7 +59,7 @@
                     <div class="main-content-wrapper">
                         <h2>旅行プランを作成して<br>
                         プランを投稿してみませんか？</h2>
-                        <p class="space">旅行のプランを作って保存・投稿できるサービス<span>「Instavel」</span></p>
+                        <p class="space">旅行プランを作って保存・投稿できるサービス<span>「Instavel」</span></p>
                         <p>旅行プランを保存しておくだけでなく、プラン作成後に投稿することで旅行内容をシェアすることができます。</p>
                         <p>投稿された旅行内容を見れば、他の人のプランを参考にすることができるので、行きたい旅行プランが簡単にみつかります。</p>
                         <p></p>

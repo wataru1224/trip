@@ -19,6 +19,7 @@ body {
 
 p {
   margin-bottom: 0;
+  line-height: 30px;
 }
 
 img {
@@ -32,11 +33,6 @@ h2 {
 
 h3 {
   font-size: 1.8rem;
-}
-
-p {
-  font-size: 0.95rem;
-  line-height: 30px;
 }
 
 li {
@@ -364,12 +360,13 @@ footer .main-footer a {
 
 @media (max-width: 599px) {
   h2 {
+    font-size: 1.3rem;
     margin-bottom: 0;
     padding-bottom: 2rem;
   }
   p {
-    font-size: 18px;
-    line-height: 32px;
+    font-size: 1rem;
+    line-height: 28px;
   }
   nav {
     position: none;
@@ -477,9 +474,6 @@ footer .main-footer a {
     transform: rotate(45deg);
     position: fixed;
   }
-  h2 {
-    font-size: 2rem;
-  }
   .header-title {
     height: 390px;
   }
@@ -489,15 +483,17 @@ footer .main-footer a {
     left: 5%;
   }
   .main-section {
-    width: 90%;
+    width: 100%;
     padding: 0;
+    margin: 0 auto;
   }
   .main-contents-wrapper {
     display: block;
-    width: 100%;
+    width: 90%;
   }
   .main-content-wrapper {
     width: 100%;
+    margin: 0;
   }
   .main-content-wrapper h2 {
     margin-top: 4rem;

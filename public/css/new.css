@@ -579,5 +579,8 @@ article {
   footer {
     margin-top: 3rem !important;
   }
+  .task-items {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=new.css.map */

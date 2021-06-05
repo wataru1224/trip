@@ -3,6 +3,7 @@
   <article>
     <form action="{{ url('/travel/create')}}" method="POST" enctype="multipart/form-data">
       {{ csrf_field() }} 
+      @csrf
       <h2>旅行タイトル</h2> 
       <div class="alert">
         @if($errors->has('title'))

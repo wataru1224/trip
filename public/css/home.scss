@@ -157,9 +157,6 @@ dl, ol, ul {
     font-weight: bold;
     font-size: 1.5rem;
   }
-  .space {
-    margin: 1rem 0;
-  }
   p {
     line-height: 30px;
     margin-bottom: 0;
@@ -314,9 +311,12 @@ footer {
     margin-bottom: 0;
     padding-bottom: 2rem;
   }
+  h3 {
+    font-size: 1.2rem;
+  }
   p {
     font-size: 1rem;
-    line-height: 28px;
+    line-height: 1.5rem;
   }
   //nav
   nav {
@@ -449,11 +449,12 @@ footer {
     h2 {
       margin-top: 4rem;
     }
-    .space {
-      margin: 0.5rem 0;
-    }
     p{
-      line-height: 2rem;
+      line-height: 1.5rem;
+    }
+    span {
+      display: inline-block;
+      margin: 0.5rem;
     }
   }
   .sub-contents {
@@ -462,6 +463,7 @@ footer {
     margin-top: 0;
     img {
       width: 80%;
+      margin-top: 1rem;
     }
   }
 
@@ -483,8 +485,8 @@ footer {
   .design-img {
     text-align: center;
     img {
-      width: 50%;
-      height: 200px;
+      width: 60%;
+      height: 150px;
     }
   }
   .design-text-box {

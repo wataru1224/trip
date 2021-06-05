@@ -534,15 +534,21 @@ article .task-items .task .task-text .btn-text img {
     width: 90%;
     margin: 0 auto;
   }
-  h2 {
+  form h2 {
     margin-top: 2rem;
     margin-bottom: 0;
+  }
+  input {
+    padding: 0;
+  }
+  .title-form {
+    padding: 1.5rem;
   }
   .item {
     padding: 1.5rem;
   }
   .main-item {
-    display: block !important;
+    display: block;
   }
   .main-item .main-items {
     margin-bottom: 1.5rem;

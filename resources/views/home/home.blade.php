@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ secure_asset('./css/home.css')}}">
+    <!-- <link rel="stylesheet" href="./css/home.css"> -->
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
     <title>Instavel</title>
 </head>
@@ -60,14 +61,14 @@
                     <div class="main-content-wrapper">
                         <h2>旅行プランを作成して<br>
                         プランを投稿してみませんか？</h2>
-                        <p class="space">旅行プランを作って保存・投稿できるサービス<span>「Instavel」</span></p>
+                        <p>旅行プランを作って保存・投稿できるサービス<span>「Instavel」</span></p>
                         <p>旅行プランを保存しておくだけでなく、プラン作成後に投稿することで旅行内容をシェアすることができます。</p>
                         <p>投稿された旅行内容を見れば、他の人のプランを参考にすることができるので、行きたい旅行プランが簡単にみつかります。</p>
                         <p></p>
                         <p></p>
                     </div>
                     <div class="sub-contents">
-                        <img src="{{ secure_asset('img/camera.jpg')}}" alt="">
+                        <img src="{{ secure_asset('img/camera.jpg')}}" alt="旅行写真">
                     </div>
                 </div>
             </section>
@@ -76,7 +77,7 @@
                 <h2><span>Instavel</span>の3つの特徴</h2>
                 <div class="design-contents">
                     <div class="design-img">
-                        <img src="{{ secure_asset('img/future.jpg')}}" alt="">             
+                        <img src="{{ secure_asset('img/future.jpg')}}" alt="旅行先">             
                     </div>
                     <div class="design-text-box">
                         <div class="design-title">
@@ -107,13 +108,14 @@
                         </div> 
                     </div>
                     <div class="design-img">
-                        <img src="{{ secure_asset('img/goto.jpg')}}" alt="">             
+                        <img src="{{ secure_asset('img/goto.jpg')}}" alt="旅行場所">   
+          
                     </div>
                 </div>
 
                 <div class="design-contents">
                     <div class="design-img">
-                        <img src="{{ secure_asset('img/planner.jpg')}}" alt="">             
+                        <img src="{{ secure_asset('img/planner.jpg')}}" alt="旅行プラン">   
                     </div>
                     <div class="design-text-box">
                         <div class="design-title">

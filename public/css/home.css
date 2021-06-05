@@ -196,10 +196,6 @@ dl, ol, ul {
   font-size: 1.5rem;
 }
 
-.main-content-wrapper .space {
-  margin: 1rem 0;
-}
-
 .main-content-wrapper p {
   line-height: 30px;
   margin-bottom: 0;
@@ -364,9 +360,12 @@ footer .main-footer a {
     margin-bottom: 0;
     padding-bottom: 2rem;
   }
+  h3 {
+    font-size: 1.2rem;
+  }
   p {
     font-size: 1rem;
-    line-height: 28px;
+    line-height: 1.5rem;
   }
   nav {
     position: none;
@@ -498,11 +497,12 @@ footer .main-footer a {
   .main-content-wrapper h2 {
     margin-top: 4rem;
   }
-  .main-content-wrapper .space {
-    margin: 0.5rem 0;
-  }
   .main-content-wrapper p {
-    line-height: 2rem;
+    line-height: 1.5rem;
+  }
+  .main-content-wrapper span {
+    display: inline-block;
+    margin: 0.5rem;
   }
   .sub-contents {
     width: 100%;
@@ -511,6 +511,7 @@ footer .main-footer a {
   }
   .sub-contents img {
     width: 80%;
+    margin-top: 1rem;
   }
   .design-section {
     width: 90%;
@@ -535,8 +536,8 @@ footer .main-footer a {
     text-align: center;
   }
   .design-img img {
-    width: 50%;
-    height: 200px;
+    width: 60%;
+    height: 150px;
   }
   .design-text-box {
     width: 100%;

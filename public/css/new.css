@@ -184,18 +184,18 @@ main article {
   border: 1px solid #000;
 }
 
-.item .main-item {
+.main-item {
   text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.item .main-item .main-items {
+.main-item .main-items {
   margin-right: 1rem;
 }
 
-.item .sub-item {
+.sub-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -205,13 +205,13 @@ main article {
   margin-top: 1.5rem;
 }
 
-.item .sub-item textarea {
+.sub-item textarea {
   width: 90%;
   padding: .8rem 1rem .6rem;
   font-size: 100%;
 }
 
-.item .image {
+.image {
   text-align: left;
   margin-top: 1rem;
 }
@@ -555,6 +555,19 @@ article .task-items .task .task-text .btn-text img {
   }
   .sub-item {
     margin-top: 0;
+  }
+  .sub-item textarea {
+    width: 80%;
+  }
+  .form-btn .btn {
+    margin-top: 2rem;
+    background-color: #000;
+  }
+  .form-btn .add-btn {
+    padding: 1rem 2rem;
+  }
+  footer {
+    margin-top: 3rem;
   }
 }
 /*# sourceMappingURL=new.css.map */

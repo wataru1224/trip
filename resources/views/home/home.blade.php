@@ -25,7 +25,7 @@
             <div class="menu">
                 <ul>
                     <li><a href="/" class="log">ホーム</a></li>
-                    <li><a href="{{ secure_asset('/travel/new')}}" class="log">プラン作成</a></li>
+                    <li><a href="/travel/new" class="log">プラン作成</a></li>
                     <li><a href="/travel/self" class="log">マイページ</a></li>                      
                     @guest
                     <li><a href="/travel/pass" class="log">ログイン</a></li>

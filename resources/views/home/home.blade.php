@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ secure_asset('./css/home.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
     <title>Instavel</title>
 </head>
 
@@ -66,7 +67,7 @@
                         <p></p>
                     </div>
                     <div class="sub-contents">
-                        <img src="{{ asset('img/camera.jpg')}}" alt="">
+                        <img src="{{ secure_asset('img/camera.jpg')}}" alt="">
                     </div>
                 </div>
             </section>
@@ -75,7 +76,7 @@
                 <h2><span>Instavel</span>の3つの特徴</h2>
                 <div class="design-contents">
                     <div class="design-img">
-                        <img src="{{ asset('img/future.jpg')}}" alt="">             
+                        <img src="{{ secure_asset('img/future.jpg')}}" alt="">             
                     </div>
                     <div class="design-text-box">
                         <div class="design-title">
@@ -106,13 +107,13 @@
                         </div> 
                     </div>
                     <div class="design-img">
-                        <img src="{{ asset('img/goto.jpg')}}" alt="">             
+                        <img src="{{ secure_asset('img/goto.jpg')}}" alt="">             
                     </div>
                 </div>
 
                 <div class="design-contents">
                     <div class="design-img">
-                        <img src="{{ asset('img/planner.jpg')}}" alt="">             
+                        <img src="{{ secure_asset('img/planner.jpg')}}" alt="">             
                     </div>
                     <div class="design-text-box">
                         <div class="design-title">
@@ -174,7 +175,5 @@
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('css/home.css') }}">
 </body>
 </html>

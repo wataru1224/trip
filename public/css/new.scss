@@ -314,39 +314,42 @@ article {
   text-align: center;
   padding: 2rem;
   width: 100%;
-  .task-items {
+}
+.task-items {
+  width: 80%;
+  margin: 0 auto;
+}
+.task {
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: space-between;
+  background: #eef2f3;
+  width: 70%;
+  padding: 0.7rem 0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
+  margin-right: auto;
+  margin-left: auto;
+}
+.task-text {
+  width: 100%;
+  word-break: break-all;
+  text-align: center;
+}
+.btn-text {
+  color: #555555;
+  display: block;
+  img {
     width: 80%;
-    margin: 0 auto;
-    .task {
-      border-radius: 0.25rem;
-      display: flex;
-      justify-content: space-between;
-      background: #eef2f3;
-      width: 70%;
-      padding: 0.7rem 0;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
-      margin-right: auto;
-      margin-left: auto;
-      .task-text {
-        width: 100%;
-        word-break: break-all;
-        text-align: center;
-        .btn-text {
-          color: #555555;
-          display: block;
-          img {
-            width: 80%;
-            text-align: center;  
-          }
-        }
-      }
-    }
+    text-align: center;  
+  }
+  .btn-text {
+    display: inline-flex;
+    justify-content: space-between;
   }
 }
 
+    
 //編集 edit
-
-
 
 @media (max-width: 599px) {  
   //nav
@@ -471,6 +474,7 @@ article {
     h2 {
     margin-top: 2rem;
     margin-bottom: 0;
+    font-size: 1.5rem;
     }
   } 
   input {
@@ -509,6 +513,8 @@ footer {
   margin-top: 3rem !important;
 }
  
+//マイページ self
+
  
 
 

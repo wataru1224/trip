@@ -378,12 +378,12 @@ article {
   width: 100%;
 }
 
-article .task-items {
+.task-items {
   width: 80%;
   margin: 0 auto;
 }
 
-article .task-items .task {
+.task {
   border-radius: 0.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -400,20 +400,29 @@ article .task-items .task {
   margin-left: auto;
 }
 
-article .task-items .task .task-text {
+.task-text {
   width: 100%;
   word-break: break-all;
   text-align: center;
 }
 
-article .task-items .task .task-text .btn-text {
+.btn-text {
   color: #555555;
   display: block;
 }
 
-article .task-items .task .task-text .btn-text img {
+.btn-text img {
   width: 80%;
   text-align: center;
+}
+
+.btn-text .btn-text {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media (max-width: 599px) {
@@ -537,6 +546,7 @@ article .task-items .task .task-text .btn-text img {
   form h2 {
     margin-top: 2rem;
     margin-bottom: 0;
+    font-size: 1.5rem;
   }
   input {
     padding: 0 !important;

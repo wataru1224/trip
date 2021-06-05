@@ -6,11 +6,13 @@
             @foreach ($trips as $trip)
             <div class="task">
                 <div class="task-text">
-                    <a href="/travel/{{$trip->id}}" class="btn-text">
+                    <a class="btn-text" href="/travel/{{$trip->id}}" >
                         <img src="{{$trip->image}}" ale="画像" />
                         <p>プラン名: {{ $trip->title }}</p>
-                        <a href="/travel/{{$trip->id}}" class="btn">プラン詳細</a>
-                        <a href="/travel/delete/{{$trip->id}}" class="btn">プラン削除</a>
+                        <div class="btn-task">
+                            <a href="/travel/{{$trip->id}}" class="btn">プラン詳細</a>
+                            <a href="/travel/delete/{{$trip->id}}" class="btn">プラン削除</a>
+                        </div>
                     </a>
                 </div>
             </div>

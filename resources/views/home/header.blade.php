@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/new.css') }}">  
     <!-- <link rel="stylesheet" type="text/css" href="css/new.css">    -->
- 
     <title>Instavel</title>
 </head>
 <body>

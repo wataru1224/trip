@@ -509,17 +509,37 @@ article {
     }
   }
 
-footer {
-  margin-top: 3rem !important;
-}
- 
-//マイページ self
-.task-items {
-  width: 100%;
-}
- 
+  footer {
+    margin-top: 3rem !important;
+  }
+  
+  //マイページ self
+  .task-items {
+    width: 100%;
+  }
+  
+  /*詳細 show*/
+  .main-plan {
+    padding: 0.5rem;
+    margin-top: 2rem;
+  }
 
-
+  .sub-plan {
+    margin-top: 0;
+    width: 90%;
+    margin: 0 auto;
+    h2 {
+      margin-top: 2rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .content-wrapper {
+    width: 90%;
+    margin-left: 1rem;
+  }
 
 }
 

@@ -582,5 +582,25 @@ article {
   .task-items {
     width: 100%;
   }
+  /*詳細 show*/
+  .main-plan {
+    padding: 0.5rem;
+    margin-top: 2rem;
+  }
+  .sub-plan {
+    margin-top: 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .sub-plan h2 {
+    margin-top: 2rem;
+  }
+  .sub-plan p {
+    font-size: 1.5rem;
+  }
+  .content-wrapper {
+    width: 90%;
+    margin-left: 1rem;
+  }
 }
 /*# sourceMappingURL=new.css.map */

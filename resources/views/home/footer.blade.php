@@ -1,4 +1,3 @@
-
 <footer>
     <div class="main-footer ">
         <a href="/">Instavel</a>

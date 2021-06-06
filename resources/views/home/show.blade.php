@@ -18,13 +18,13 @@
                 <br>
                 @foreach ($itineraries as $itinerary)
                 <p class="border">{{ $itinerary['date'] }}</p>
+                <div class="plan-wrapper">
+                    <?php
+                    $time = new DateTime($itinerary['time']);
+                    ?>
+                    <p>{{$time->format('H:i')}}</p>
+                </div>
                 <div class="contents-wrapper">  
-                    <div class="plan-wrapper">
-                        <?php
-                        $time = new DateTime($itinerary['time']);
-                        ?>
-                        <p>{{$time->format('H:i')}}</p>
-                    </div>
                     <div class="content-wrapper">
                         <p class="wrapper-text">{{ $itinerary['destination'] }}</p>   
                         <img src="{{$itinerary->image}}" onerror="this.onerror = null; this.src='';" />    

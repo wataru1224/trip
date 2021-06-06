@@ -27,7 +27,6 @@
                     </div>
                     <div class="content-wrapper">
                         <p class="wrapper-text">{{ $itinerary['destination'] }}</p>   
-                        <p>{{ $itinerary['contents'] }}</p>
                         <img src="{{$itinerary->image}}" onerror="this.onerror = null; this.src='';" />    
                     </div>
                 </div>

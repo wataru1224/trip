@@ -594,13 +594,15 @@ article {
   }
   .sub-plan h2 {
     margin-top: 2rem;
+    margin-bottom: 1rem;
   }
   .sub-plan p {
     font-size: 1.5rem;
+    margin-bottom: 0.5rem;
   }
   .content-wrapper {
-    width: 90%;
-    margin-left: 0rem;
+    width: 100%;
+    margin-left: 0;
   }
   .item .btn {
     margin-top: 1rem;

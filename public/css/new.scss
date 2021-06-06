@@ -530,15 +530,17 @@ article {
     margin: 0 auto;
     h2 {
       margin-top: 2rem;
+      margin-bottom: 1rem;
     }
     p {
       font-size: 1.5rem;
+      margin-bottom: 0.5rem;
     }
   }
   
   .content-wrapper {
-    width: 90%;
-    margin-left: 0rem;
+    width: 100%;
+    margin-left: 0;
   }
 
   //編集 edit

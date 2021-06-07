@@ -478,14 +478,14 @@ article {
     transform: translateX(-100%);
     /*左に隠しておく*/
     background-color: rgba(46, 46, 46, 0.9);
-  }
-  /*OPEN時の動き*/
-  .menu.open {
     position: fixed;
     top: 0;
     z-index: 10;
+  }
+  /*OPEN時の動き*/
+  .menu.open {
     -webkit-transform: translateX(0%);
-    transform: translateX(0%);
+            transform: translateX(0%);
     /*中身を表示（右へスライド）*/
   }
   /*トグルボタンのスタイルを指定*/

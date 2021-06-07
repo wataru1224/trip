@@ -360,18 +360,16 @@ footer {
 
   .menu{
     text-align:center;
-    // background-color:rgba(255,255,255,0.5);
     transition: 0.55s ease;/*滑らかに表示*/
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);/*左に隠しておく*/
     background-color: rgba(46, 46, 46, 0.9);
+    position: fixed;
+    top: 0;
   }
 
   /*OPEN時の動き*/
   .menu.open {
-    position: fixed;
-    top: 0;
-    -webkit-transform: translateX(0%);
     transform: translateX(0%);/*中身を表示（右へスライド）*/
   }
 

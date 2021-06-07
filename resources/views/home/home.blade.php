@@ -7,7 +7,7 @@
     <title>Instavel</title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ secure_asset('./css/home.css')}}">
+    <link rel="stylesheet" href="{{ asset('/css/home.css')}}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
@@ -66,7 +66,7 @@
                         <p></p>
                     </div>
                     <div class="sub-contents">
-                        <img src="{{ secure_asset('img/camera.jpg')}}" alt="">
+                        <img src="{{ asset('img/camera.jpg')}}" alt="">
                     </div>
                 </div>
             </section>
@@ -75,7 +75,7 @@
                 <h2><span>Instavel</span>の3つの特徴</h2>
                 <div class="design-contents">
                     <div class="design-img">
-                        <img src="{{ secure_asset('img/future.jpg')}}" alt="">             
+                        <img src="{{ asset('img/future.jpg')}}" alt="">             
                     </div>
                     <div class="design-text-box">
                         <div class="design-title">
@@ -96,23 +96,23 @@
                         <div class="design-title">
                             <p>02</p>
                             <h3>
-                                行先の混雑具合がわかる
+                                新しい発見がある
                             </h3>
                         </div>   
                         <div class="design-text">
-                            <p>「こんな時期だけど旅行したい。」</p>
-                            <p>「でも混雑している場所には行きたくない。」</p>
-                            <p>そんな考えの人も多いと思います。実際に旅行して混雑していたかを表示しているので安心してプランの参考にできます。</p>
+                            <p>「こんな場所があるんだ。」</p>
+                            <p>「このお店行ってみたい。」</p>
+                            <p>実際に観光した人が写真を載せているので、調べても出てこない情報があるかも！</p>
                         </div> 
                     </div>
                     <div class="design-img">
-                        <img src="{{ secure_asset('img/goto.jpg')}}" alt="">             
+                        <img src="{{ asset('img/goto.jpg')}}" alt="">             
                     </div>
                 </div>
 
                 <div class="design-contents">
                     <div class="design-img">
-                        <img src="{{ secure_asset('img/planner.jpg')}}" alt="">             
+                        <img src="{{ asset('img/planner.jpg')}}" alt="">             
                     </div>
                     <div class="design-text-box">
                         <div class="design-title">
@@ -123,7 +123,7 @@
                         </div>   
                         <div class="design-text">
                             <p>プラン作成・プラン投稿に関して難しい操作は必要ありません。</p>
-                            <p>プランを参考にする ⇒ プランを作成する ⇒ プランを投稿する これだけの機能に絞っているので難しいことはありません。</p>
+                            <p>プラン参考 ⇒ プラン作成 ⇒ プラン投稿 これだけの機能に絞っているので難しいことはありません。</p>
                         </div> 
                     </div>
                 </div>

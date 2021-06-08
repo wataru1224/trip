@@ -239,6 +239,7 @@ dl, ol, ul {
   display: flex;
   flex-wrap: wrap;
 }
+
 .task-items {
   width: 40%;
   padding-bottom: 4rem;
@@ -247,10 +248,12 @@ dl, ol, ul {
     padding: 0.5rem;
     font-weight: bold;
     color: #000;
-    background-color: rgb(235, 235, 235);
+    background: #eef2f3;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
   }
   img {
     width: 100%;
+    height: 350px;
   }
 }
 
@@ -515,6 +518,9 @@ footer {
   }
   .task-items {
     width: 80%;
+    img {
+      height: 250px;
+    }
   }
 
 }

@@ -1,7 +1,7 @@
 @include('home.header')
 <main>
   <article>
-    <form action="{{ url('/travel/create')}}" method="POST" enctype="multipart/form-data">
+    <form class="main-form" action="{{ url('/travel/create')}}" method="POST" enctype="multipart/form-data">
       {{ csrf_field() }} 
       @csrf
       <h2>旅行タイトル</h2> 

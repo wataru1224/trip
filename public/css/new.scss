@@ -23,8 +23,6 @@ img {
 }
 h2 {
   font-size: 2rem;
-  margin-top: 4rem;
-  margin-bottom: 1.5rem;
 }
 p {
   font-size: 0.95rem;
@@ -105,8 +103,16 @@ button {
   font-size: 1rem;
 }
 
-//new.blade
+//new
 /*main*/
+.main-form {
+  width: 70%;
+  margin: 0 auto;
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+}
 input {
   padding: .8rem 1rem .6rem;
   font-style: 100%;
@@ -119,7 +125,6 @@ main {
   article {
     text-align: center;
     margin: 0 auto;
-    width: 70%;
   }
 }
 
@@ -171,11 +176,6 @@ main {
   margin-top: 1rem;
 }
 
-
-.btn-text {
-  color: #eef2f3;
-  padding: 0.2rem;
-}
 .form-btn {
   button {
    display: block;
@@ -221,7 +221,6 @@ footer {
     text-align: center;
     a {
       font-size: 2.5rem;
-      font-family: sans-serif;
     }
   }
 }
@@ -230,6 +229,8 @@ footer {
 .plan {
   margin: 0 auto;
   text-align: center;
+  width: 70%;
+  margin: 0 auto;
   img {
     width: 50%;
     margin-top: 3rem;
@@ -256,14 +257,13 @@ footer {
   margin-top: 5rem;
   h2 {
     display: inline-block;
-    font-size: 2rem;
+    font-size: 2.5rem;
     border-bottom: solid 1px #107ef4;
-    margin-bottom: 2rem;
   }
   p {
     font-size: 2rem;
     padding-left: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-align: left;
   }
   .border {
@@ -314,44 +314,54 @@ article {
   text-align: center;
   padding: 2rem;
   width: 100%;
-}
-.task-items {
-  width: 80%;
-  margin: 0 auto;
+  h2 {
+    margin-bottom: 1.5rem;
+  }
 }
 .task {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.task-items {
+  width: 40%;
   border-radius: 0.25rem;
+  margin-bottom: 3rem;
+  padding: 0.7rem 0;
+  margin: 0 auto;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
+  background: #eef2f3;
+  img {
+      width: 80%;
+      text-align: center;      
+      height: 350px;
+  }
+  p {
+    color: #000;
+    font-size: 1.2rem;
+  }
+}
+  
+.btn-task {
   display: flex;
   justify-content: space-between;
-  background: #eef2f3;
-  width: 70%;
-  padding: 0.7rem 0;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
-  margin-right: auto;
-  margin-left: auto;
-}
-.task-text {
-  width: 100%;
-  word-break: break-all;
-  text-align: center;
-}
-.btn-text {
-  color: #555555;
-  display: block;
-  img {
-    width: 80%;
-    text-align: center;  
-  }
-  .btn-text {
-    display: inline-flex;
-    justify-content: space-between;
-  }
+  margin: 0 auto;
+  width: 80%;
 }
 
     
 //編集 edit
 
+
 @media (max-width: 599px) {  
+  article {
+    h2 {
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;  
+      font-size: 1.7rem;
+    }
+  }
+
   //nav
   nav {
     position: none;
@@ -466,7 +476,7 @@ article {
       padding: 0;
     }
   }
-  form {
+  .main-form {
     width: 90%;
     margin: 0 auto;
     h2 {
@@ -507,16 +517,29 @@ article {
     }
   }
 
+/* footer */
   footer {
     margin-top: 3rem ;
+    .main-footer {
+      a {
+        font-size: 2rem;
+      }
+    }
   }
   
   //マイページ self
-  .task-items {
+  .task {
     width: 100%;
   }
-  .task {
+  .task-items {
     width: 80%;
+    margin-bottom: 2rem;
+    img {
+      height: 250px;
+    }
+  }
+  .btn {
+    padding: 0.2rem 0.5rem;
   }
   
   /*詳細 show*/
@@ -529,10 +552,6 @@ article {
     margin-top: 0;
     width: 90%;
     margin: 0 auto;
-    h2 {
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-    }
     p {
       font-size: 1.5rem;
       margin-bottom: 0.5rem;

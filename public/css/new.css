@@ -28,8 +28,6 @@ img {
 
 h2 {
   font-size: 2rem;
-  margin-top: 4rem;
-  margin-bottom: 1.5rem;
 }
 
 p {
@@ -136,6 +134,16 @@ button {
 }
 
 /*main*/
+.main-form {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.main-form h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
 input {
   padding: .8rem 1rem .6rem;
   font-style: 100%;
@@ -151,7 +159,6 @@ main {
 main article {
   text-align: center;
   margin: 0 auto;
-  width: 70%;
 }
 
 .title-form {
@@ -216,11 +223,6 @@ main article {
   margin-top: 1rem;
 }
 
-.btn-text {
-  color: #eef2f3;
-  padding: 0.2rem;
-}
-
 .form-btn button {
   display: block;
 }
@@ -271,13 +273,14 @@ footer .main-footer {
 
 footer .main-footer a {
   font-size: 2.5rem;
-  font-family: sans-serif;
 }
 
 /*詳細 show*/
 .plan {
   margin: 0 auto;
   text-align: center;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .plan img {
@@ -311,15 +314,14 @@ footer .main-footer a {
 
 .sub-plan h2 {
   display: inline-block;
-  font-size: 2rem;
+  font-size: 2.5rem;
   border-bottom: solid 1px #107ef4;
-  margin-bottom: 2rem;
 }
 
 .sub-plan p {
   font-size: 2rem;
   padding-left: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: left;
 }
 
@@ -378,54 +380,57 @@ article {
   width: 100%;
 }
 
-.task-items {
-  width: 80%;
-  margin: 0 auto;
+article h2 {
+  margin-bottom: 1.5rem;
 }
 
 .task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.task-items {
+  width: 40%;
   border-radius: 0.25rem;
+  margin-bottom: 3rem;
+  padding: 0.7rem 0;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
+  background: #eef2f3;
+}
+
+.task-items img {
+  width: 80%;
+  text-align: center;
+  height: 350px;
+}
+
+.task-items p {
+  color: #000;
+  font-size: 1.2rem;
+}
+
+.btn-task {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #eef2f3;
-  width: 70%;
-  padding: 0.7rem 0;
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
-          box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.task-text {
-  width: 100%;
-  word-break: break-all;
-  text-align: center;
-}
-
-.btn-text {
-  color: #555555;
-  display: block;
-}
-
-.btn-text img {
+  margin: 0 auto;
   width: 80%;
-  text-align: center;
-}
-
-.btn-text .btn-text {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 @media (max-width: 599px) {
+  article h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+  }
   nav {
     position: none;
     width: 100%;
@@ -539,11 +544,11 @@ article {
     width: 100%;
     padding: 0;
   }
-  form {
+  .main-form {
     width: 90%;
     margin: 0 auto;
   }
-  form h2 {
+  .main-form h2 {
     margin-top: 2rem;
     margin-bottom: 0;
     font-size: 1.5rem;
@@ -576,14 +581,25 @@ article {
   .form-btn .add-btn {
     padding: 1rem 2rem;
   }
+  /* footer */
   footer {
     margin-top: 3rem;
   }
-  .task-items {
-    width: 100%;
+  footer .main-footer a {
+    font-size: 2rem;
   }
   .task {
+    width: 100%;
+  }
+  .task-items {
     width: 80%;
+    margin-bottom: 2rem;
+  }
+  .task-items img {
+    height: 250px;
+  }
+  .btn {
+    padding: 0.2rem 0.5rem;
   }
   /*詳細 show*/
   .main-plan {
@@ -594,10 +610,6 @@ article {
     margin-top: 0;
     width: 90%;
     margin: 0 auto;
-  }
-  .sub-plan h2 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
   }
   .sub-plan p {
     font-size: 1.5rem;

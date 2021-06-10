@@ -1,62 +1,120 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# 初めに
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# アプリ概要
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## タイトル
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**「Instavel」** 
+「Instagram」+「Travel」を合わせて、写真から行きたい旅行を選べるアプリを開発したいと考えました。
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 開発の背景
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**「自分の好きなこと」の課題解決をしようと考えました！**
+趣味である旅行プランを考える際に、観光本やネット検索から情報を集めることが多いのですが、
+同じような内容や行ってみたらイメージと違うなどの問題がありました。そこで、同じように悩
+んでいる方のこの課題を解決するアプリを開発しようと思いました。
+**実際に旅行した人の写真や感想があれば参考になる！**
+旅行場所を決める際も映像や写真から「ここに行きたい！」と考えることが多いので、旅行者が
+写真付きで投稿したプランを参考にするアプリ開発をしようと考えました。
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## ターゲット
 
-### Premium Partners
+**ターゲット①（旅行によく行く人）**
+* 20～40代の女性・男性
+* 休みに旅行を検討している
+* 旅行本に載っていない場所に行きたい人
+* SNS(Twitter/Instagram)の情報で旅行を決めるような人
+* 旅行内容を保存して、同じ場所に旅行する時に思い出せるようにしたい人
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
+**ターゲット②（旅行にあまり行かない人）**
+* 20～40代の女性・男性
+* 写真から目的地を選びたい
+* 旅行本を買うのは面倒な人
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+## 使用イメージ
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+**全体イメージ
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
+**新規登録、ログイン／ログオフ機能
+エラー表示あり
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+**フォームからの投稿機能
+
+
+
+**投稿の削除機能
+
+
+## 使用技術
+
+**フロントエンド
+HTML/CSS JavaScript
+
+バックエンド
+PHP 7.3.7
+Laravel 8.41.0
+
+DBMS
+MySQL/PHPMyAdmin
+
+デプロイ環境
+Heroku
+
+
+## 機能一覧
+
+課題解決のために必要な機能だけ実装することを意識しました。
+
+
+## DB設計
+
+非常に簡単なDB設計ですが、DB設計の難しさを経験し
+
+概念設計⇒論理設計(主に正規化)⇒物理設計
+
+の流れが学習できたことは大きな収穫でした。
+
+以下が最終的なDB設計です。
+
+
+## 工夫した点
+
+1. Twitterでアウトプット 
+自走することとチーム開発という実務を見据えた開発を意識しました。
+実装した機能やつまづいた箇所についてはコードの処理を言語化し１行１行の理解を深めました。
+また、次回アプリ開発時の復習材料として見返せることも見据えて欠かさずアウトプットしました。
+
+
+
+1. Githubの活用
+Githubについては以下のように活用しました。
+
+・issueを出してタスク管理
+
+・issueをpull requestで結び付けてタスクを消化
+
+・ぱっと見で何をしたかわかるcommit messageを意識
+
+
+## 苦労した点
+
+1. データベースの設計及びリレーション処理
+当初はリレーションの理解が浅くSQLの書き方がわかりませんでした。
+
+工夫点の2.で記述した通り紙に書いて対策を取りました。
+
+1. Herokuでのデプロイ
+特にローカル環境(MyAdmin)から本番環境(MySQL Workbench)へデータベースを移行する際、
+SQLの処理がうまくいかず苦戦しました。
+
+

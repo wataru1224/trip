@@ -30,17 +30,14 @@
 
 ## 使用技術
 
-**フロントエンド
-
+** フロントエンド **
 HTML/CSS JavaScript
 
-**バックエンド
-
+** バックエンド **
 PHP 7.3.7
 Laravel 8.41.0
 
-**環境
-
+** 環境 **
 DB
 MySQL/PHPMyAdmin
 
